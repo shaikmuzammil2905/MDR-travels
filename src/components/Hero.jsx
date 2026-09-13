@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Calendar, Car } from 'lucide-react';
 import heroBg from '../assets/image copy 3.png';
 
@@ -24,34 +25,34 @@ Vehicle Type: ${vehicle}`;
   };
 
   return (
-    <section id="home" className="hero">
+    <section className="hero">
       <div className="hero-bg">
         <img src={heroBg} alt="MDR Travels Premium Bus" />
       </div>
       <div className="hero-overlay"></div>
       
       <div className="container" style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center' }}>
-        <div className="hero-content animate-fade-in">
+        <div className="hero-content reveal">
           <h1 className="hero-title">
             Travel Comfortably.<br />
-            Travel With <span>MDR</span>.
+            Travel With <span style={{ color: 'var(--primary-yellow)' }}>MDR</span>.
           </h1>
           <p className="hero-subtitle">
             Safe, comfortable and reliable travel services in Visakhapatnam and
             across destinations in Andhra Pradesh.
           </p>
           <div className="hero-buttons">
-            <a href="#services" className="btn btn-primary">
-              <span>Book Your Ride</span>
+            <Link to="/services" className="btn btn-primary">
+              <span>Explore Services</span>
               <ArrowRight size={20} />
-            </a>
+            </Link>
             <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
               WhatsApp Us
             </a>
           </div>
         </div>
 
-        <div className="hero-booking-card animate-fade-in delay-200">
+        <div className="hero-booking-card reveal" style={{ transitionDelay: '200ms' }}>
           <h3 className="booking-title">Where do you want to go?</h3>
           <form onSubmit={handleBookingSubmit}>
             <div className="form-group">

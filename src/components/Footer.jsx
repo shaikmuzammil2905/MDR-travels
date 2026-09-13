@@ -1,16 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/image.png';
 
 const Footer = () => {
   return (
-    <footer id="about" className="footer">
+    <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div>
-            <a href="#home" className="footer-logo">
-              <img src={logo} alt="MDR Travels Logo" />
-            </a>
+            <Link to="/" style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--white)', display: 'block', marginBottom: '1.5rem' }}>
+              MDR <span style={{ color: 'var(--primary-yellow)' }}>Travels</span>
+            </Link>
             <p className="footer-about">
               MDR Travels provides premium, reliable, and comfortable travel services in Visakhapatnam and across Andhra Pradesh. Your journey, our priority.
             </p>
@@ -19,10 +19,10 @@ const Footer = () => {
           <div>
             <h4 className="footer-title">Quick Links</h4>
             <div className="footer-links">
-              <a href="#home" className="footer-link">Home</a>
-              <a href="#services" className="footer-link">Services</a>
-              <a href="#vehicles" className="footer-link">Vehicles</a>
-              <a href="#packages" className="footer-link">Tour Packages</a>
+              <Link to="/" className="footer-link">Home</Link>
+              <Link to="/services" className="footer-link">Services</Link>
+              <Link to="/vehicles" className="footer-link">Vehicles</Link>
+              <Link to="/packages" className="footer-link">Tour Packages</Link>
             </div>
           </div>
           

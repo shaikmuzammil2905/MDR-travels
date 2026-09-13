@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Car, Map, Palmtree, Plane, Train, MessageCircle } from 'lucide-react';
+import Modal from './Modal';
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
   const services = [
     {
       icon: <Car size={36} />,
@@ -33,7 +36,7 @@ const Services = () => {
   return (
     <section id="services" className="section services">
       <div className="container">
-        <div className="text-center">
+        <div className="text-center reveal">
           <h2 className="section-title">Our Travel Services</h2>
           <p className="section-subtitle">
             Reliable travel solutions for local journeys, outstation trips,
@@ -43,24 +46,46 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card animate-fade-in">
+            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms` }} onClick={() => setSelectedService(service)}>
               <div className="service-icon-wrapper">
                 {service.icon}
               </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-desc">{service.description}</p>
               <div className="service-actions">
-                <a href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi, I'm interested in your ${service.title} service.`)}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{flex: 1}}>
-                  Get Quote
-                </a>
-                <a href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi, I would like to inquire about ${service.title}.`)}`} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{padding: '0.75rem'}}>
-                  <MessageCircle size={20} />
-                </a>
+                <button className="btn btn-outline" style={{flex: 1}} onClick={(e) => { e.stopPropagation(); setSelectedService(service); }}>
+                  View Details
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <Modal isOpen={!!selectedService} onClose={() => setSelectedService(null)} title={selectedService?.title}>
+        {selectedService && (
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ display: 'inline-block', padding: '2rem', background: 'rgba(7, 87, 184, 0.1)', borderRadius: '50%', color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
+              {selectedService.icon}
+            </div>
+            <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#555', marginBottom: '2rem' }}>
+              {selectedService.description}
+            </p>
+            <p style={{ fontWeight: 500, marginBottom: '2rem' }}>
+              Contact us on WhatsApp to get the best quote for this service!
+            </p>
+            <a 
+              href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi, I would like to inquire about the ${selectedService.title} service.`)}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-whatsapp"
+              style={{ width: '100%', fontSize: '1.1rem', padding: '1rem' }}
+            >
+              <MessageCircle size={20} /> Inquire Now on WhatsApp
+            </a>
+          </div>
+        )}
+      </Modal>
     </section>
   );
 };

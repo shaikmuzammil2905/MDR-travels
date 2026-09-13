@@ -15,7 +15,7 @@ const TrustStrip = () => {
       <div className="container">
         <div className="trust-grid">
           {trustItems.map((item, index) => (
-            <div key={index} className={`trust-item animate-fade-in delay-${index * 100}`}>
+            <div key={index} className={`trust-item reveal`} style={{ transitionDelay: `${index * 100}ms` }}>
               <div className="trust-icon">
                 {item.icon}
               </div>

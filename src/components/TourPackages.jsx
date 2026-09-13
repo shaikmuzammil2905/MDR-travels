@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Map, Clock, CheckCircle, MessageCircle } from 'lucide-react';
+import arakuImage from '../assets/araku-valley.jpg';
+import Modal from './Modal';
 
 const TourPackages = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="packages" className="section" style={{ background: 'var(--light-bg)' }}>
       <div className="container">
-        <div className="text-center">
+        <div className="text-center reveal">
           <h2 className="section-title">Popular Tour Packages</h2>
           <p className="section-subtitle">
             Experience the beauty of Andhra Pradesh with our specially curated tour packages.
           </p>
         </div>
 
-        <div className="package-card animate-fade-in">
+        <div className="package-card reveal" style={{ cursor: 'pointer' }} onClick={() => setIsModalOpen(true)}>
           <div className="package-img">
-            <img src="https://images.unsplash.com/photo-1625447665796-03f47e3a9cfa?auto=format&fit=crop&q=80&w=800" alt="Araku Valley" />
+            <img src={arakuImage} alt="Araku Valley" />
           </div>
           <div className="package-content">
             <h3 className="package-title">Araku Valley One Day Tour</h3>
@@ -32,16 +36,40 @@ const TourPackages = () => {
             </div>
 
             <div className="package-actions">
-              <a href="https://wa.me/918247096395?text=Hi,%20I%20want%20to%20book%20the%20Araku%20Valley%20One%20Day%20Tour." target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Book This Package
-              </a>
-              <a href="https://wa.me/918247096395?text=Hi,%20I%20need%20more%20details%20about%20the%20Araku%20Valley%20Tour." target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                <MessageCircle size={18} /> Inquire
-              </a>
+              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setIsModalOpen(true); }}>
+                View Package Details
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Araku Valley Tour Details">
+        <div>
+          <img src={arakuImage} alt="Araku Valley" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem' }} />
+          <h4 style={{ fontSize: '1.2rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Tour Itinerary Highlights</h4>
+          <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+            Escape to the misty hills of Araku Valley. This full-day guided tour begins with a morning pickup from your location in Visakhapatnam. We ensure a comfortable ride through the scenic Eastern Ghats.
+          </p>
+          <ul style={{ listStyleType: 'none', paddingLeft: '0', marginBottom: '1.5rem', color: '#555', lineHeight: 1.6, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Visakhapatnam to Araku scenic drive</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Explore the million-year-old Borra Caves</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Visit the picturesque Padmapuram Gardens</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Taste authentic coffee at the Coffee Museum</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Discover local culture at the Tribal Museum</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={18} className="text-primary-blue" /> Safe return drop-off to Visakhapatnam</li>
+          </ul>
+          <a 
+            href={`https://wa.me/918247096395?text=${encodeURIComponent('Hi, I am interested in booking the Araku Valley One Day Tour. Can you share the pricing and availability?')}`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-whatsapp"
+            style={{ width: '100%', fontSize: '1.1rem', padding: '1rem', justifyContent: 'center' }}
+          >
+            <MessageCircle size={20} /> Book on WhatsApp
+          </a>
+        </div>
+      </Modal>
     </section>
   );
 };
