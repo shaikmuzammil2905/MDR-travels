@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
 const Home = () => (
   <Layout>
     <div style={{ marginTop: '-80px' }}><Hero /></div>
-    <div className="container">
+    <div className="container mobile-only">
       <BookingForm />
     </div>
     <TrustStrip />

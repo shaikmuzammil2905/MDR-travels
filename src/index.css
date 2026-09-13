@@ -864,19 +864,22 @@ ul {
 }
 
 
-.booking-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  box-shadow: var(--shadow-lg);
-  width: 100%;
-  max-width: 400px;
-}
+/* Visibility utilities */
 .desktop-only { display: block; }
-.mobile-only { display: none; }
+.mobile-only { display: none !important; }
+
 @media (max-width: 992px) {
   .desktop-only { display: none !important; }
-  .mobile-only { display: block !important; margin: -2rem auto 3rem; position: relative; z-index: 10; padding: 0 1rem; }
-  .mobile-only .booking-card { max-width: 100%; }
+  .mobile-only { 
+    display: block !important; 
+    margin: 1.5rem auto 2.5rem; 
+    position: relative; 
+    z-index: 10; 
+    padding: 0 1rem; 
+  }
+  .mobile-only .booking-card { 
+    max-width: 480px; 
+    margin: 0 auto;
+  }
 }
 
