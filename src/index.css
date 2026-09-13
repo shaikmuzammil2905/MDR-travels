@@ -593,9 +593,9 @@ ul {
     position: relative !important;
     overflow: hidden !important;
   }
-  /* Subtle, clean gradient on the left side: leaves ocean, road, and bus bright! */
+  /* Subtle, clean gradient on the left side: leaves cloudy sky, ocean, road, and bus bright! */
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(0, 18, 45, 0.72) 0%, rgba(0, 20, 50, 0.45) 45%, rgba(0, 20, 50, 0.08) 68%, rgba(0, 0, 0, 0) 100%) !important;
+    background: linear-gradient(90deg, rgba(0, 25, 65, 0.42) 0%, rgba(0, 25, 65, 0.18) 45%, rgba(0, 0, 0, 0) 70%) !important;
   }
   .hero-layout {
     padding: 0 1.25rem !important;
