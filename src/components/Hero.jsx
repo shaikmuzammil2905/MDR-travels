@@ -1,14 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle } from 'lucide-react';
-import heroBg from '../assets/hero-bright.png';
+import heroBgDesktop from '../assets/hero-bright.png';
+import heroBgMobile from '../assets/hero-mobile.png';
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-bg">
-        <img src={heroBg} alt="MDR Travels Luxury Bus" />
+      {/* Desktop Background */}
+      <div className="hero-bg desktop-bg">
+        <img src={heroBgDesktop} alt="MDR Travels Luxury Bus" />
       </div>
+
+      {/* Mobile Background - image copy 23 */}
+      <div className="hero-bg mobile-bg">
+        <img src={heroBgMobile} alt="MDR Travels Luxury Bus" />
+      </div>
+
       <div className="hero-overlay"></div>
       
       <div className="container hero-layout">
@@ -24,7 +32,7 @@ const Hero = () => {
           <div className="hero-buttons">
             <Link to="/services" className="btn btn-primary hero-btn">
               <span>Explore Services</span>
-              <ArrowRight size={18} />
+              <ArrowRight size={14} className="btn-icon" />
             </Link>
             <a 
               href="https://wa.me/918247096395" 
@@ -32,7 +40,7 @@ const Hero = () => {
               rel="noopener noreferrer" 
               className="btn btn-whatsapp hero-btn"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={14} className="btn-icon" />
               <span>WhatsApp Us</span>
             </a>
           </div>

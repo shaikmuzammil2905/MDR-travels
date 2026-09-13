@@ -8,6 +8,7 @@ import FleetPricing from './components/FleetPricing';
 import TourPackages from './components/TourPackages';
 import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
+import AboutSection from './components/AboutSection';
 import { MessageCircle } from 'lucide-react';
 
 const ScrollToTop = () => {
@@ -88,16 +89,7 @@ const PackagesPage = () => (
 
 const AboutPage = () => (
   <Layout>
-    <div className="container section text-center animate-fade-in">
-      <h2 className="section-title">About MDR Travels</h2>
-      <p className="section-subtitle">
-        MDR Travels is a premier travel agency based in Visakhapatnam, offering safe, reliable, and comfortable transportation services across Andhra Pradesh.
-      </p>
-      <div style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', color: '#555' }}>
-        <p style={{ marginBottom: '1rem' }}>Our mission is to provide an unparalleled travel experience with our fleet of well-maintained vehicles and professional drivers.</p>
-        <p>Located at 58-32-6, Adharsha Nagar, Kancharapalem, Visakhapatnam, we are here to serve all your travel needs.</p>
-      </div>
-    </div>
+    <AboutSection />
   </Layout>
 );
 
