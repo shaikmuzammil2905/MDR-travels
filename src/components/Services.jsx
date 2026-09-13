@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Car, Map, Palmtree, Plane, Train, MessageCircle } from 'lucide-react';
+import { Car, Map, Palmtree, Plane, Train, MessageCircle, CheckCircle } from 'lucide-react';
 import Modal from './Modal';
+import defaultServiceImg from '../assets/image copy 3.png';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -9,27 +10,67 @@ const Services = () => {
     {
       icon: <Car size={36} />,
       title: "Local Car Rentals",
-      description: "Comfortable sedan and SUV rentals for local travel within Visakhapatnam, with flexible options for personal, family and business journeys."
+      description: "Comfortable sedan and SUV rentals for local travel within Visakhapatnam, with flexible options for personal, family and business journeys.",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600",
+      features: [
+        "Flexible hourly and daily rental packages",
+        "Clean, well-maintained air-conditioned vehicles",
+        "Professional, locally knowledgeable drivers",
+        "Perfect for city tours, shopping, and business meetings",
+        "Transparent pricing with no hidden charges"
+      ]
     },
     {
       icon: <Map size={36} />,
       title: "Outstation Taxi Service",
-      description: "Reliable outstation taxi services with comfortable vehicles and transparent per-kilometre pricing for your long-distance journeys."
+      description: "Reliable outstation taxi services with comfortable vehicles and transparent per-kilometre pricing for your long-distance journeys.",
+      image: "https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&q=80&w=600",
+      features: [
+        "Safe and comfortable intercity travel",
+        "Experienced drivers for highway driving",
+        "Round-trip and one-way drop options available",
+        "Regular vehicle health checks before long trips",
+        "24/7 customer support during your journey"
+      ]
     },
     {
       icon: <Palmtree size={36} />,
       title: "Araku Tour Packages",
-      description: "Explore the beautiful Araku Valley with comfortable vehicles and dedicated one-day tour packages."
+      description: "Explore the beautiful Araku Valley with comfortable vehicles and dedicated one-day tour packages.",
+      image: "https://images.unsplash.com/photo-1625447665796-03f47e3a9cfa?auto=format&fit=crop&q=80&w=600",
+      features: [
+        "Dedicated guided tours to Araku Valley",
+        "Visits to Borra Caves, Coffee Museum, and Gardens",
+        "Comfortable seating for the ghat road journey",
+        "Customizable itineraries for families and groups",
+        "Knowledgeable drivers acting as local guides"
+      ]
     },
     {
       icon: <Plane size={36} />,
       title: "Airport Pickup & Drop",
-      description: "Convenient airport pickup and drop services designed for safe, comfortable and timely transfers."
+      description: "Convenient airport pickup and drop services designed for safe, comfortable and timely transfers.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=600",
+      features: [
+        "Punctual and reliable airport transfers",
+        "Flight tracking to adjust for delays",
+        "Meet and greet service at arrivals",
+        "Spacious vehicles for extra luggage",
+        "Available for late-night and early-morning flights"
+      ]
     },
     {
       icon: <Train size={36} />,
       title: "Railway Station Pickup & Drop",
-      description: "Easy and reliable railway station transfers for individuals, families and groups."
+      description: "Easy and reliable railway station transfers for individuals, families and groups.",
+      image: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=600",
+      features: [
+        "Timely pickups for train departures",
+        "Wait-and-pick service for arriving trains",
+        "Hassle-free parking and loading assistance",
+        "Suitable vehicles for varying group sizes",
+        "Pre-booking available for peace of mind"
+      ]
     }
   ];
 
@@ -46,7 +87,7 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms` }} onClick={() => setSelectedService(service)}>
+            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer' }} onClick={() => setSelectedService(service)}>
               <div className="service-icon-wrapper">
                 {service.icon}
               </div>
@@ -64,22 +105,41 @@ const Services = () => {
 
       <Modal isOpen={!!selectedService} onClose={() => setSelectedService(null)} title={selectedService?.title}>
         {selectedService && (
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ display: 'inline-block', padding: '2rem', background: 'rgba(7, 87, 184, 0.1)', borderRadius: '50%', color: 'var(--primary-blue)', marginBottom: '1.5rem' }}>
-              {selectedService.icon}
+          <div>
+            <img src={selectedService.image || defaultServiceImg} alt={selectedService.title} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+              <div style={{ padding: '0.8rem', background: 'rgba(7, 87, 184, 0.1)', borderRadius: '50%', color: 'var(--primary-blue)' }}>
+                {selectedService.icon}
+              </div>
+              <h4 style={{ fontSize: '1.3rem', color: 'var(--dark-blue)', margin: 0 }}>Service Overview</h4>
             </div>
-            <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#555', marginBottom: '2rem' }}>
+            
+            <p style={{ fontSize: '1.05rem', lineHeight: 1.6, color: '#555', marginBottom: '1.5rem' }}>
               {selectedService.description}
             </p>
-            <p style={{ fontWeight: 500, marginBottom: '2rem' }}>
-              Contact us on WhatsApp to get the best quote for this service!
-            </p>
+
+            <h5 style={{ fontSize: '1.1rem', color: 'var(--dark-text)', marginBottom: '1rem' }}>Key Features:</h5>
+            <ul style={{ listStyleType: 'none', paddingLeft: '0', marginBottom: '1.5rem', color: '#555', lineHeight: 1.6, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              {selectedService.features.map((feature, i) => (
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <CheckCircle size={18} className="text-primary-blue" style={{ flexShrink: 0, marginTop: '0.2rem' }} /> 
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div style={{ background: '#f8f9fa', padding: '1rem', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem', borderLeft: '4px solid var(--primary-yellow)' }}>
+              <p style={{ fontWeight: 500, margin: 0, color: 'var(--dark-blue)' }}>
+                Need a custom itinerary or specific vehicle? Our team is ready to help you plan the perfect trip.
+              </p>
+            </div>
+
             <a 
-              href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi, I would like to inquire about the ${selectedService.title} service.`)}`} 
+              href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi, I would like to inquire about the ${selectedService.title} service. Could you provide more information and pricing?`)}`} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-whatsapp"
-              style={{ width: '100%', fontSize: '1.1rem', padding: '1rem' }}
+              style={{ width: '100%', fontSize: '1.1rem', padding: '1rem', justifyContent: 'center' }}
             >
               <MessageCircle size={20} /> Inquire Now on WhatsApp
             </a>

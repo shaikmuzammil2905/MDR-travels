@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import logo from '../assets/image.png';
 
 const Footer = () => {
   return (
@@ -8,8 +9,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <Link to="/" style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--white)', display: 'block', marginBottom: '1.5rem' }}>
-              MDR <span style={{ color: 'var(--primary-yellow)' }}>Travels</span>
+            <Link to="/" className="footer-logo">
+              <img src={logo} alt="MDR Travels Logo" style={{ height: '60px', background: 'white', padding: '5px', borderRadius: '8px', marginBottom: '1.5rem' }} />
             </Link>
             <p className="footer-about">
               MDR Travels provides premium, reliable, and comfortable travel services in Visakhapatnam and across Andhra Pradesh. Your journey, our priority.

@@ -60,6 +60,7 @@ const Home = () => (
   <Layout>
     <div style={{ marginTop: '-80px' }}><Hero /></div>
     <TrustStrip />
+    <Services />
   </Layout>
 );
 

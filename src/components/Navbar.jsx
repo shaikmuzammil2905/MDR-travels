@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import logo from '../assets/image.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,8 +32,8 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled || location.pathname !== '/' ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <Link to="/" className="nav-logo" style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--dark-blue)' }}>
-          MDR <span style={{ color: 'var(--primary-red)' }}>Travels</span>
+        <Link to="/" className="nav-logo">
+          <img src={logo} alt="MDR Travels Logo" style={{ height: '50px', objectFit: 'contain' }} />
         </Link>
 
         <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
