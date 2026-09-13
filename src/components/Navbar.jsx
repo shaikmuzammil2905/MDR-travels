@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle, ChevronDown } from 'lucide-react';
 import logo from '../assets/image.png';
 
@@ -7,9 +7,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // 'services' | 'vehicles' | 'packages' | null
-  const [mobileExpanded, setMobileExpanded] = useState({});
+  const [mobileExpanded, setMobileExpanded] = useState(null); // 'services' | 'vehicles' | 'packages' | null
   const location = useLocation();
-  const navigate = useNavigate();
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -40,13 +39,15 @@ const Navbar = () => {
   useEffect(() => {
     setOpenDropdown(null);
     setIsMobileMenuOpen(false);
+    setMobileExpanded(null);
   }, [location.pathname]);
 
+  const toggleDropdown = (key) => {
+    setOpenDropdown((prev) => (prev === key ? null : key));
+  };
+
   const toggleMobileSubmenu = (key) => {
-    setMobileExpanded((prev) => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+    setMobileExpanded((prev) => (prev === key ? null : key));
   };
 
   const servicesList = [
@@ -77,7 +78,7 @@ const Navbar = () => {
     <nav ref={navRef} className={`navbar ${isScrolled || location.pathname !== '/' ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="nav-logo">
-          <img src={logo} alt="MDR Travels Logo" style={{ height: '50px', objectFit: 'contain' }} />
+          <img src={logo} alt="MDR Travels Logo" className="navbar-logo-img" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -90,27 +91,31 @@ const Navbar = () => {
           </Link>
 
           {/* Services Dropdown */}
-          <div 
-            className="nav-item-dropdown"
-            onMouseEnter={() => setOpenDropdown('services')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="nav-item-dropdown">
             <button 
+              type="button"
               className={`nav-dropdown-trigger ${isServicesActive || openDropdown === 'services' ? 'active' : ''}`}
-              onClick={() => {
-                if (openDropdown === 'services') {
-                  navigate('/services');
-                  setOpenDropdown(null);
-                } else {
-                  setOpenDropdown('services');
-                }
-              }}
+              onClick={() => toggleDropdown('services')}
+              aria-expanded={openDropdown === 'services'}
             >
               <span>Services</span>
-              <ChevronDown size={15} style={{ transition: 'transform 0.2s', transform: openDropdown === 'services' ? 'rotate(180deg)' : 'none' }} />
+              <ChevronDown 
+                size={16} 
+                style={{ 
+                  transition: 'transform 0.25s ease', 
+                  transform: openDropdown === 'services' ? 'rotate(180deg)' : 'none' 
+                }} 
+              />
             </button>
             {openDropdown === 'services' && (
               <div className="nav-dropdown-menu">
+                <Link 
+                  to="/services" 
+                  className="nav-dropdown-header-link"
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  All Services Overview →
+                </Link>
                 {servicesList.map((item, idx) => (
                   <Link 
                     key={idx} 
@@ -127,27 +132,31 @@ const Navbar = () => {
           </div>
 
           {/* Vehicles Dropdown */}
-          <div 
-            className="nav-item-dropdown"
-            onMouseEnter={() => setOpenDropdown('vehicles')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="nav-item-dropdown">
             <button 
+              type="button"
               className={`nav-dropdown-trigger ${isVehiclesActive || openDropdown === 'vehicles' ? 'active' : ''}`}
-              onClick={() => {
-                if (openDropdown === 'vehicles') {
-                  navigate('/vehicles');
-                  setOpenDropdown(null);
-                } else {
-                  setOpenDropdown('vehicles');
-                }
-              }}
+              onClick={() => toggleDropdown('vehicles')}
+              aria-expanded={openDropdown === 'vehicles'}
             >
               <span>Vehicles</span>
-              <ChevronDown size={15} style={{ transition: 'transform 0.2s', transform: openDropdown === 'vehicles' ? 'rotate(180deg)' : 'none' }} />
+              <ChevronDown 
+                size={16} 
+                style={{ 
+                  transition: 'transform 0.25s ease', 
+                  transform: openDropdown === 'vehicles' ? 'rotate(180deg)' : 'none' 
+                }} 
+              />
             </button>
             {openDropdown === 'vehicles' && (
               <div className="nav-dropdown-menu">
+                <Link 
+                  to="/vehicles" 
+                  className="nav-dropdown-header-link"
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  All Fleet & Pricing →
+                </Link>
                 {vehiclesList.map((item, idx) => (
                   <Link 
                     key={idx} 
@@ -164,27 +173,31 @@ const Navbar = () => {
           </div>
 
           {/* Packages Dropdown */}
-          <div 
-            className="nav-item-dropdown"
-            onMouseEnter={() => setOpenDropdown('packages')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="nav-item-dropdown">
             <button 
+              type="button"
               className={`nav-dropdown-trigger ${isPackagesActive || openDropdown === 'packages' ? 'active' : ''}`}
-              onClick={() => {
-                if (openDropdown === 'packages') {
-                  navigate('/packages');
-                  setOpenDropdown(null);
-                } else {
-                  setOpenDropdown('packages');
-                }
-              }}
+              onClick={() => toggleDropdown('packages')}
+              aria-expanded={openDropdown === 'packages'}
             >
               <span>Packages</span>
-              <ChevronDown size={15} style={{ transition: 'transform 0.2s', transform: openDropdown === 'packages' ? 'rotate(180deg)' : 'none' }} />
+              <ChevronDown 
+                size={16} 
+                style={{ 
+                  transition: 'transform 0.25s ease', 
+                  transform: openDropdown === 'packages' ? 'rotate(180deg)' : 'none' 
+                }} 
+              />
             </button>
             {openDropdown === 'packages' && (
               <div className="nav-dropdown-menu">
+                <Link 
+                  to="/packages" 
+                  className="nav-dropdown-header-link"
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  All Tour Packages →
+                </Link>
                 {packagesList.map((item, idx) => (
                   <Link 
                     key={idx} 
@@ -209,11 +222,16 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
-          <a href="tel:8247096395" className="btn btn-outline">
+          <a href="tel:8247096395" className="btn btn-outline nav-call-btn">
             <Phone size={18} />
             <span>Call Now</span>
           </a>
-          <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+          <a 
+            href="https://wa.me/918247096395" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-whatsapp nav-wa-btn"
+          >
             <MessageCircle size={18} />
             <span>WhatsApp</span>
           </a>
@@ -230,56 +248,35 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div style={{
-          position: 'absolute',
-          top: '100%',
-          left: 0,
-          width: '100%',
-          background: 'white',
-          padding: '1.25rem',
-          boxShadow: 'var(--shadow-md)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.75rem',
-          maxHeight: '80vh',
-          overflowY: 'auto'
-        }}>
+        <div className="mobile-menu-drawer">
           <Link 
             to="/" 
-            style={{
-              padding: '0.6rem 0.5rem',
-              borderBottom: '1px solid #eee',
-              fontWeight: 600,
-              color: location.pathname === '/' ? 'var(--primary-red)' : 'var(--dark-blue)'
-            }}
+            className={`mobile-nav-link ${location.pathname === '/' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
 
           {/* Mobile Services Submenu */}
-          <div>
+          <div className="mobile-dropdown-group">
             <div 
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: '0.6rem 0.5rem',
-                borderBottom: '1px solid #eee',
-                fontWeight: 600,
-                color: isServicesActive ? 'var(--primary-red)' : 'var(--dark-blue)',
-                cursor: 'pointer'
-              }}
+              className={`mobile-dropdown-header ${isServicesActive || mobileExpanded === 'services' ? 'active' : ''}`}
               onClick={() => toggleMobileSubmenu('services')}
             >
               <span>Services</span>
-              <ChevronDown size={18} style={{ transform: mobileExpanded.services ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+              <ChevronDown 
+                size={18} 
+                style={{ 
+                  transform: mobileExpanded === 'services' ? 'rotate(180deg)' : 'none', 
+                  transition: 'transform 0.2s ease' 
+                }} 
+              />
             </div>
-            {mobileExpanded.services && (
-              <div style={{ paddingLeft: '1rem', background: '#fcfcfc', borderBottom: '1px solid #eee' }}>
+            {mobileExpanded === 'services' && (
+              <div className="mobile-submenu-body">
                 <Link 
                   to="/services" 
-                  style={{ display: 'block', padding: '0.5rem 0', color: 'var(--primary-red)', fontWeight: 600 }}
+                  className="mobile-submenu-all-link"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   View All Services →
@@ -288,7 +285,7 @@ const Navbar = () => {
                   <Link 
                     key={idx} 
                     to={item.path} 
-                    style={{ display: 'block', padding: '0.4rem 0', color: '#555', fontSize: '0.95rem' }}
+                    className="mobile-submenu-item"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     • {item.title}
@@ -299,28 +296,25 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Vehicles Submenu */}
-          <div>
+          <div className="mobile-dropdown-group">
             <div 
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: '0.6rem 0.5rem',
-                borderBottom: '1px solid #eee',
-                fontWeight: 600,
-                color: isVehiclesActive ? 'var(--primary-red)' : 'var(--dark-blue)',
-                cursor: 'pointer'
-              }}
+              className={`mobile-dropdown-header ${isVehiclesActive || mobileExpanded === 'vehicles' ? 'active' : ''}`}
               onClick={() => toggleMobileSubmenu('vehicles')}
             >
               <span>Vehicles</span>
-              <ChevronDown size={18} style={{ transform: mobileExpanded.vehicles ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+              <ChevronDown 
+                size={18} 
+                style={{ 
+                  transform: mobileExpanded === 'vehicles' ? 'rotate(180deg)' : 'none', 
+                  transition: 'transform 0.2s ease' 
+                }} 
+              />
             </div>
-            {mobileExpanded.vehicles && (
-              <div style={{ paddingLeft: '1rem', background: '#fcfcfc', borderBottom: '1px solid #eee' }}>
+            {mobileExpanded === 'vehicles' && (
+              <div className="mobile-submenu-body">
                 <Link 
                   to="/vehicles" 
-                  style={{ display: 'block', padding: '0.5rem 0', color: 'var(--primary-red)', fontWeight: 600 }}
+                  className="mobile-submenu-all-link"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   View All Vehicles →
@@ -329,7 +323,7 @@ const Navbar = () => {
                   <Link 
                     key={idx} 
                     to={item.path} 
-                    style={{ display: 'block', padding: '0.4rem 0', color: '#555', fontSize: '0.95rem' }}
+                    className="mobile-submenu-item"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     • {item.title}
@@ -340,28 +334,25 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Packages Submenu */}
-          <div>
+          <div className="mobile-dropdown-group">
             <div 
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: '0.6rem 0.5rem',
-                borderBottom: '1px solid #eee',
-                fontWeight: 600,
-                color: isPackagesActive ? 'var(--primary-red)' : 'var(--dark-blue)',
-                cursor: 'pointer'
-              }}
+              className={`mobile-dropdown-header ${isPackagesActive || mobileExpanded === 'packages' ? 'active' : ''}`}
               onClick={() => toggleMobileSubmenu('packages')}
             >
               <span>Packages</span>
-              <ChevronDown size={18} style={{ transform: mobileExpanded.packages ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+              <ChevronDown 
+                size={18} 
+                style={{ 
+                  transform: mobileExpanded === 'packages' ? 'rotate(180deg)' : 'none', 
+                  transition: 'transform 0.2s ease' 
+                }} 
+              />
             </div>
-            {mobileExpanded.packages && (
-              <div style={{ paddingLeft: '1rem', background: '#fcfcfc', borderBottom: '1px solid #eee' }}>
+            {mobileExpanded === 'packages' && (
+              <div className="mobile-submenu-body">
                 <Link 
                   to="/packages" 
-                  style={{ display: 'block', padding: '0.5rem 0', color: 'var(--primary-red)', fontWeight: 600 }}
+                  className="mobile-submenu-all-link"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   View All Packages →
@@ -370,7 +361,7 @@ const Navbar = () => {
                   <Link 
                     key={idx} 
                     to={item.path} 
-                    style={{ display: 'block', padding: '0.4rem 0', color: '#555', fontSize: '0.95rem' }}
+                    className="mobile-submenu-item"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     • {item.title}
@@ -382,21 +373,22 @@ const Navbar = () => {
 
           <Link 
             to="/about" 
-            style={{
-              padding: '0.6rem 0.5rem',
-              borderBottom: '1px solid #eee',
-              fontWeight: 600,
-              color: location.pathname === '/about' ? 'var(--primary-red)' : 'var(--dark-blue)'
-            }}
+            className={`mobile-nav-link ${location.pathname === '/about' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
 
-          <a href="tel:8247096395" className="btn btn-primary" style={{justifyContent: 'center', marginTop: '0.75rem'}}>
-            <Phone size={18} />
-            <span>Call Now</span>
-          </a>
+          <div className="mobile-actions-wrapper">
+            <a href="tel:8247096395" className="btn btn-outline" style={{ justifyContent: 'center' }}>
+              <Phone size={18} />
+              <span>Call Now</span>
+            </a>
+            <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ justifyContent: 'center' }}>
+              <MessageCircle size={18} />
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
       )}
     </nav>

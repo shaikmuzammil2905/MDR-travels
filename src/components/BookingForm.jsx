@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar, Car } from 'lucide-react';
+import { MapPin, Calendar, Car, MessageCircle } from 'lucide-react';
 
 const BookingForm = ({ className }) => {
   const handleBookingSubmit = (e) => {
@@ -11,9 +11,9 @@ const BookingForm = ({ className }) => {
     const vehicle = formData.get('vehicle');
     
     const message = `Hello MDR Travels, I would like to get a quote for a trip:
-Pickup: ${pickup}
+Pickup Location: ${pickup}
 Destination: ${destination}
-Date: ${date}
+Travel Date: ${date}
 Vehicle Type: ${vehicle}`;
 
     const whatsappUrl = `https://wa.me/918247096395?text=${encodeURIComponent(message)}`;
@@ -21,46 +21,72 @@ Vehicle Type: ${vehicle}`;
   };
 
   return (
-    <div className={`booking-card ${className || ''}`}>
-      <h3 className="booking-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Where do you want to go?</h3>
+    <div className={`booking-card-floating ${className || ''}`}>
+      <div className="booking-card-header">
+        <MapPin size={24} className="booking-header-icon" />
+        <h3 className="booking-title">Where do you want to go?</h3>
+      </div>
+      
       <form onSubmit={handleBookingSubmit}>
         <div className="booking-form-grid">
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label>Pickup Location</label>
-            <div style={{ position: 'relative' }}>
-              <MapPin size={18} style={{ position: 'absolute', left: '10px', top: '12px', color: '#888' }} />
-              <input type="text" name="pickup" required className="form-control" style={{ paddingLeft: '2.5rem' }} placeholder="e.g. Visakhapatnam" />
-            </div>
+          <div className="form-group">
+            <label className="form-label-with-icon">
+              <MapPin size={16} className="field-icon" />
+              <span>Pickup Location</span>
+            </label>
+            <input 
+              type="text" 
+              name="pickup" 
+              required 
+              className="form-control" 
+              placeholder="Enter pickup location" 
+            />
           </div>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label>Destination</label>
-            <div style={{ position: 'relative' }}>
-              <MapPin size={18} style={{ position: 'absolute', left: '10px', top: '12px', color: '#888' }} />
-              <input type="text" name="destination" required className="form-control" style={{ paddingLeft: '2.5rem' }} placeholder="e.g. Araku Valley" />
-            </div>
+
+          <div className="form-group">
+            <label className="form-label-with-icon">
+              <MapPin size={16} className="field-icon" />
+              <span>Destination</span>
+            </label>
+            <input 
+              type="text" 
+              name="destination" 
+              required 
+              className="form-control" 
+              placeholder="Enter destination" 
+            />
           </div>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label>Travel Date</label>
-            <div style={{ position: 'relative' }}>
-              <Calendar size={18} style={{ position: 'absolute', left: '10px', top: '12px', color: '#888' }} />
-              <input type="date" name="date" required className="form-control" style={{ paddingLeft: '2.5rem' }} />
-            </div>
+
+          <div className="form-group">
+            <label className="form-label-with-icon">
+              <Calendar size={16} className="field-icon" />
+              <span>Travel Date</span>
+            </label>
+            <input 
+              type="date" 
+              name="date" 
+              required 
+              className="form-control" 
+            />
           </div>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label>Vehicle Type</label>
-            <div style={{ position: 'relative' }}>
-              <Car size={18} style={{ position: 'absolute', left: '10px', top: '12px', color: '#888' }} />
-              <select name="vehicle" className="form-control" style={{ paddingLeft: '2.5rem' }}>
-                <option value="Sedan">Sedan (4 Seater)</option>
-                <option value="SUV">SUV (6-7 Seater)</option>
-                <option value="Tempo Traveller">Tempo Traveller</option>
-                <option value="Bus">Bus</option>
-              </select>
-            </div>
+
+          <div className="form-group">
+            <label className="form-label-with-icon">
+              <Car size={16} className="field-icon" />
+              <span>Vehicle Type</span>
+            </label>
+            <select name="vehicle" className="form-control" defaultValue="Sedan (4 Seater)">
+              <option value="Sedan (4 Seater)">Sedan (4 Seater)</option>
+              <option value="SUV (6-7 Seater)">SUV (6-7 Seater)</option>
+              <option value="Tempo Traveller (12-14 Seater)">Tempo Traveller (12-14 Seater)</option>
+              <option value="Luxury Bus / Coach">Luxury Bus / Coach</option>
+            </select>
           </div>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <button type="submit" className="btn btn-primary booking-btn" style={{ width: '100%', height: '46px', marginTop: 0, whiteSpace: 'nowrap' }}>
-              Get a Quote
+
+          <div className="booking-form-btn-col">
+            <button type="submit" className="booking-quote-btn">
+              <MessageCircle size={20} />
+              <span>Get a Quote</span>
             </button>
           </div>
         </div>
