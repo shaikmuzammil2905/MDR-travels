@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Users, Briefcase, Settings, MessageCircle } from 'lucide-react';
 import Modal from './Modal';
+import sedanImg from '../assets/img8.png';
+import suvImg from '../assets/img9.png';
+import tempoImg from '../assets/img10.png';
 
 const FleetPricing = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
@@ -13,7 +16,7 @@ const FleetPricing = () => {
       bags: 2,
       ac: true,
       price: "13",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600"
+      image: sedanImg
     },
     {
       name: "SUV (6-7 Seater)",
@@ -22,7 +25,7 @@ const FleetPricing = () => {
       bags: 4,
       ac: true,
       price: "18",
-      image: "https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&q=80&w=600"
+      image: suvImg
     },
     {
       name: "Tempo Traveller",
@@ -31,7 +34,7 @@ const FleetPricing = () => {
       bags: 8,
       ac: true,
       price: "25",
-      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600"
+      image: tempoImg
     }
   ];
 

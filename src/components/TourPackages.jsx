@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Map, Clock, CheckCircle, MessageCircle } from 'lucide-react';
-import arakuImage from '../assets/araku-valley.jpg';
+import arakuImage from '../assets/img11.png';
 import Modal from './Modal';
 
 const TourPackages = () => {

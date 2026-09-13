@@ -7,6 +7,7 @@ import Services from './components/Services';
 import FleetPricing from './components/FleetPricing';
 import TourPackages from './components/TourPackages';
 import Footer from './components/Footer';
+import BookingForm from './components/BookingForm';
 import { MessageCircle } from 'lucide-react';
 
 const ScrollToTop = () => {
@@ -59,6 +60,9 @@ const Layout = ({ children }) => {
 const Home = () => (
   <Layout>
     <div style={{ marginTop: '-80px' }}><Hero /></div>
+    <div className="container mobile-only">
+      <BookingForm />
+    </div>
     <TrustStrip />
     <Services />
   </Layout>

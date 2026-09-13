@@ -239,7 +239,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(6, 43, 85, 0.9) 0%, rgba(6, 43, 85, 0.4) 100%);
+  background: linear-gradient(90deg, rgba(0, 35, 75, 0.55) 0%, rgba(0, 35, 75, 0.25) 50%, rgba(0, 35, 75, 0.05) 100%);
   z-index: -1;
 }
 .hero-content {
@@ -269,16 +269,23 @@ ul {
   gap: 1rem;
   margin-top: 1rem;
 }
+.hero-layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
 .hero-booking-card {
   background: var(--white);
   border-radius: var(--radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow-lg);
+  width: 100%;
   max-width: 400px;
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  justify-self: end;
 }
 .booking-title {
   font-size: 1.5rem;
@@ -317,10 +324,10 @@ ul {
 
 @media (max-width: 992px) {
   .hero-bg img {
-    object-position: 70% center; /* Adjusting so bus is visible on mobile */
+    object-position: 70% center;
   }
   .hero-overlay {
-    background: linear-gradient(to bottom, rgba(6, 43, 85, 0.8) 0%, rgba(6, 43, 85, 0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0, 35, 75, 0.5) 0%, rgba(0, 35, 75, 0.3) 50%, rgba(0, 35, 75, 0.1) 100%);
   }
   .hero-content {
     align-items: center;
@@ -328,20 +335,12 @@ ul {
     margin: 0 auto;
     padding-bottom: 2rem;
   }
-  .hero-title { font-size: 3rem; }
+  .hero-title { font-size: clamp(32px, 8vw, 46px); }
   .hero-booking-card {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    margin: 3rem auto 0;
-    width: 100%;
+    display: none; /* Removed completely from mobile hero per user instructions */
   }
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 120px;
-    padding-bottom: 40px;
+  .hero-layout {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -764,5 +763,22 @@ ul {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.booking-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+}
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+@media (max-width: 992px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; margin: -2rem auto 3rem; position: relative; z-index: 10; padding: 0 1rem; }
+  .mobile-only .booking-card { max-width: 100%; }
 }
 
