@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Users, Briefcase, Settings, MessageCircle } from 'lucide-react';
 import Modal from './Modal';
-import sedanImg from '../assets/img8.png';
-import suvImg from '../assets/img9.png';
-import tempoImg from '../assets/img10.png';
+import sedanImg from '../assets/img14.png';
+import suvImg from '../assets/img15.png';
+import tempoImg from '../assets/img16.png';
 
 const FleetPricing = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
@@ -51,8 +51,8 @@ const FleetPricing = () => {
         <div className="services-grid">
           {fleet.map((vehicle, index) => (
             <div key={index} className="fleet-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer' }} onClick={() => setSelectedVehicle(vehicle)}>
-              <div className="fleet-img">
-                <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div className="fleet-img" style={{ background: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '0.75rem' }} />
                 <div className="fleet-badge">{vehicle.type}</div>
               </div>
               <div className="fleet-content">
@@ -77,7 +77,9 @@ const FleetPricing = () => {
       <Modal isOpen={!!selectedVehicle} onClose={() => setSelectedVehicle(null)} title={`${selectedVehicle?.name} Booking`}>
         {selectedVehicle && (
           <div>
-            <img src={selectedVehicle.image} alt={selectedVehicle.name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem' }} />
+            <div style={{ background: '#f8fafc', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '240px' }}>
+              <img src={selectedVehicle.image} alt={selectedVehicle.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', padding: '1rem' }} />
+            </div>
             <h4 style={{ fontSize: '1.2rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Vehicle Details</h4>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '1.5rem', color: '#555', lineHeight: 1.6 }}>
               <li><strong>Model:</strong> {selectedVehicle.type}</li>

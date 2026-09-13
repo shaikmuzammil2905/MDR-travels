@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Car, Map, Palmtree, Plane, Train, MessageCircle, CheckCircle } from 'lucide-react';
 import Modal from './Modal';
 import defaultServiceImg from '../assets/image copy 3.png';
+import outstationImg from '../assets/img8.png';
+import arakuImg from '../assets/img9.png';
+import railwayImg from '../assets/img10.png';
+import airportImg from '../assets/img11.png';
+import localCarImg from '../assets/img14.png';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -11,7 +16,7 @@ const Services = () => {
       icon: <Car size={36} />,
       title: "Local Car Rentals",
       description: "Comfortable sedan and SUV rentals for local travel within Visakhapatnam, with flexible options for personal, family and business journeys.",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600",
+      image: localCarImg,
       features: [
         "Flexible hourly and daily rental packages",
         "Clean, well-maintained air-conditioned vehicles",
@@ -24,7 +29,7 @@ const Services = () => {
       icon: <Map size={36} />,
       title: "Outstation Taxi Service",
       description: "Reliable outstation taxi services with comfortable vehicles and transparent per-kilometre pricing for your long-distance journeys.",
-      image: "https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&q=80&w=600",
+      image: outstationImg,
       features: [
         "Safe and comfortable intercity travel",
         "Experienced drivers for highway driving",
@@ -37,7 +42,7 @@ const Services = () => {
       icon: <Palmtree size={36} />,
       title: "Araku Tour Packages",
       description: "Explore the beautiful Araku Valley with comfortable vehicles and dedicated one-day tour packages.",
-      image: "https://images.unsplash.com/photo-1625447665796-03f47e3a9cfa?auto=format&fit=crop&q=80&w=600",
+      image: arakuImg,
       features: [
         "Dedicated guided tours to Araku Valley",
         "Visits to Borra Caves, Coffee Museum, and Gardens",
@@ -50,7 +55,7 @@ const Services = () => {
       icon: <Plane size={36} />,
       title: "Airport Pickup & Drop",
       description: "Convenient airport pickup and drop services designed for safe, comfortable and timely transfers.",
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=600",
+      image: airportImg,
       features: [
         "Punctual and reliable airport transfers",
         "Flight tracking to adjust for delays",
@@ -63,7 +68,7 @@ const Services = () => {
       icon: <Train size={36} />,
       title: "Railway Station Pickup & Drop",
       description: "Easy and reliable railway station transfers for individuals, families and groups.",
-      image: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=600",
+      image: railwayImg,
       features: [
         "Timely pickups for train departures",
         "Wait-and-pick service for arriving trains",

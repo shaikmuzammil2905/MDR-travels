@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import heroBg from '../assets/image copy 3.png';
-import BookingForm from './BookingForm';
 
 const Hero = () => {
   return (
@@ -32,11 +31,10 @@ const Hero = () => {
             </a>
           </div>
         </div>
-
-        <BookingForm className="desktop-only reveal" style={{ transitionDelay: '200ms', justifySelf: 'end' }} />
       </div>
     </section>
   );
 };
 
 export default Hero;
+
