@@ -34,7 +34,7 @@ const DestinationsSection = () => {
     {
       name: "Amaravati",
       desc: "The ancient capital known for the majestic Amaravati Stupa and Buddhist heritage.",
-      image: "/images/amaravati.png"
+      image: "/images/image67.png"
     },
     {
       name: "Srisailam",
