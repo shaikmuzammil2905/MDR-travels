@@ -58,7 +58,7 @@ const DestinationsSection = () => {
           </p>
         </div>
 
-        <div className="destinations-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
+        <div className="destinations-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
           {destinations.map((dest, idx) => (
             <div key={idx} className="destination-card" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '16px', overflow: 'hidden', background: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
               <div style={{ height: '200px', width: '100%' }}>

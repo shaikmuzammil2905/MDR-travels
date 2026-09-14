@@ -40,25 +40,22 @@ const TravelProcessSection = () => {
           </p>
         </div>
 
-        <div className="process-grid" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
-          {/* Vertical connecting line */}
+        <div className="process-grid-container">
           <div className="animated-flow-line"></div>
           
           {steps.map((step, idx) => (
-            <div key={idx} className="process-card" style={{ display: 'flex', alignItems: 'center', gap: '2rem', transitionDelay: `${idx * 100}ms`, position: 'relative', zIndex: 2 }}>
+            <div key={idx} className="process-card-step">
               
-              {/* Icon / Number Container */}
-              <div style={{ flexShrink: 0, width: '100px', height: '100px', background: 'var(--white)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '4px solid #f1f5f9', position: 'relative', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="process-step-icon">
                 {step.icon}
-                <div style={{ position: 'absolute', top: '0', right: '0', width: '32px', height: '32px', background: 'var(--primary-red)', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1.1rem', boxShadow: 'var(--shadow-sm)' }}>
+                <div className="process-step-number">
                   {idx + 1}
                 </div>
               </div>
               
-              {/* Content Box */}
-              <div style={{ flexGrow: 1, background: '#f8fafc', padding: '2rem', borderRadius: '16px', border: '1px solid #f1f5f9', boxShadow: '0 4px 10px rgba(0,0,0,0.02)' }}>
-                <h3 style={{ fontSize: '1.4rem', color: 'var(--dark-blue)', marginBottom: '0.75rem', fontWeight: 700 }}>{step.title}</h3>
-                <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.6', margin: 0 }}>{step.desc}</p>
+              <div className="process-step-content">
+                <h3 className="process-step-title">{step.title}</h3>
+                <p className="process-step-desc">{step.desc}</p>
               </div>
             </div>
           ))}

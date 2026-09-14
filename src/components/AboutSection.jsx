@@ -110,7 +110,7 @@ const AboutSection = ({ isHomePage }) => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
             {/* Pictorial Representation */}
             <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', height: '100%', minHeight: '400px', position: 'relative' }}>
               <img src={vizagImg} alt="MDR Travel Experience" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
