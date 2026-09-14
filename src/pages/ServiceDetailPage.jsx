@@ -79,7 +79,7 @@ const ServiceDetailPage = () => {
       </section>
 
       <section className="section">
-        <div className="container reveal">
+        <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr minmax(300px, 400px)', gap: '3rem', alignItems: 'start' }}>
             
             <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>

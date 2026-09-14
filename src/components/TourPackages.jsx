@@ -89,7 +89,7 @@ const TourPackages = ({ isHomePage }) => {
         <div className="container">
           <div className="packages-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2.5rem' }}>
             {packages.map((pkg, idx) => (
-              <div key={idx} className="package-card reveal" style={{ transitionDelay: `${idx * 100}ms`, background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column' }}>
+              <div key={idx} className="package-card" style={{ transitionDelay: `${idx * 100}ms`, background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column' }}>
                 <div className="package-img" style={{ height: '240px', position: 'relative' }}>
                   <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', padding: '2rem 1.5rem 1rem' }}>

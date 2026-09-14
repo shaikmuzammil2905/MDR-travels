@@ -45,7 +45,7 @@ const DestinationDetailPage = () => {
       </section>
 
       <section className="section">
-        <div className="container reveal" style={{ textAlign: 'center' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
           <div style={{ background: '#fff', padding: '3rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="section-title">Travel to {data.title}</h2>
             <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '2rem' }}>

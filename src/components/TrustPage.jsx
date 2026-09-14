@@ -55,7 +55,7 @@ const TrustPage = ({ isHomePage }) => {
         <div className="container">
           <div className="services-grid">
             {trustCards.map((card, idx) => (
-              <div key={idx} className="service-card reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
+              <div key={idx} className="service-card" style={{ transitionDelay: `${idx * 100}ms` }}>
                 <div className="service-icon-wrapper" style={{ marginBottom: '1.25rem' }}>
                   {card.icon}
                 </div>
@@ -75,7 +75,7 @@ const TrustPage = ({ isHomePage }) => {
       <section className="section" style={{ background: 'var(--light-bg)' }}>
         <div className="container">
           <div className="about-grid-story" style={{ alignItems: 'center' }}>
-            <div className="about-story-text reveal">
+            <div className="about-story-text">
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1rem' }}>Comfort Starts With the Journey</h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#475569', marginBottom: '1.5rem' }}>
                 At MDR Travels, we believe that the journey is just as important as the destination. Whether you're traveling for a short city errand or a multi-day outstation tour, we ensure a premium experience.

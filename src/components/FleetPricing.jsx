@@ -41,7 +41,7 @@ const FleetPricing = () => {
   return (
     <section id="vehicles" className="section">
       <div className="container">
-        <div className="text-center reveal">
+        <div className="text-center">
           <h2 className="section-title">Choose Your Travel Comfort</h2>
           <p className="section-subtitle">
             Well-maintained, clean and comfortable vehicles for all your travel needs.
@@ -50,7 +50,7 @@ const FleetPricing = () => {
 
         <div className="services-grid">
           {fleet.map((vehicle, index) => (
-            <div key={index} className="fleet-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer' }} onClick={() => setSelectedVehicle(vehicle)}>
+            <div key={index} className="fleet-card" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer' }} onClick={() => setSelectedVehicle(vehicle)}>
               <div className="fleet-img" style={{ background: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '0.75rem' }} />
                 <div className="fleet-badge">{vehicle.type}</div>

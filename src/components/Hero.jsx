@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero-overlay"></div>
       
       <div className="container hero-layout">
-        <div className="hero-content reveal">
+        <div className="hero-content">
           <h1 className="hero-title">
             Travel Comfortably.<br />
             Travel With <span className="highlight-text">MDR</span>.

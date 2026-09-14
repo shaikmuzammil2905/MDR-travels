@@ -82,7 +82,7 @@ const Services = () => {
   return (
     <section id="services" className="section services">
       <div className="container">
-        <div className="text-center reveal">
+        <div className="text-center">
           <h2 className="section-title">Our Travel Services</h2>
           <p className="section-subtitle">
             Reliable travel solutions for local journeys, outstation trips,
@@ -92,7 +92,7 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer', textAlign: 'center', alignItems: 'center' }} onClick={() => setSelectedService(service)}>
+            <div key={index} className="service-card" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer', textAlign: 'center', alignItems: 'center' }} onClick={() => setSelectedService(service)}>
               <div className="service-icon-wrapper" style={{ width: '85px', height: '85px', marginBottom: '1.75rem' }}>
                 {service.icon}
               </div>

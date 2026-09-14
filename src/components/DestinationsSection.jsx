@@ -34,7 +34,7 @@ const DestinationsSection = () => {
     {
       name: "Amaravati",
       desc: "The ancient capital known for the majestic Amaravati Stupa and Buddhist heritage.",
-      image: "/images/hero-bright.png"
+      image: "/images/amaravati.png"
     },
     {
       name: "Srisailam",
@@ -51,7 +51,7 @@ const DestinationsSection = () => {
   return (
     <section className="section" style={{ background: 'var(--light-bg)' }}>
       <div className="container">
-        <div className="text-center reveal" style={{ marginBottom: '3rem' }}>
+        <div className="text-center" style={{ marginBottom: '3rem' }}>
           <h2 className="section-title">Popular Destinations</h2>
           <p className="section-subtitle">
             Travel across Andhra Pradesh with MDR Travels. We provide comfortable transportation to all major tourist and pilgrimage destinations.
@@ -60,7 +60,7 @@ const DestinationsSection = () => {
 
         <div className="destinations-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
           {destinations.map((dest, idx) => (
-            <div key={idx} className="destination-card reveal" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '16px', overflow: 'hidden', background: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
+            <div key={idx} className="destination-card" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '16px', overflow: 'hidden', background: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
               <div style={{ height: '200px', width: '100%' }}>
                 <img src={dest.image} alt={dest.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>

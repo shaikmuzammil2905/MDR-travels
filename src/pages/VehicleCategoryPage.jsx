@@ -85,7 +85,7 @@ const VehicleCategoryPage = () => {
 
       {/* Intro & Advantages */}
       <section className="section">
-        <div className="container reveal">
+        <div className="container">
           <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', marginBottom: '3rem' }}>
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '1.8rem' }}>Why Choose Our {data.title}?</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>

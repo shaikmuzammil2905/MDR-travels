@@ -121,7 +121,7 @@ const ContactPage = ({ isHomePage }) => {
               </div>
             </div>
 
-            <div className="form-container reveal" style={{ background: '#fff', padding: '2rem', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+            <div className="form-container" style={{ background: '#fff', padding: '2rem', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
               <form onSubmit={handleSubmit}>
                 <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div style={{ gridColumn: '1 / -1' }}>
@@ -193,21 +193,21 @@ const ContactPage = ({ isHomePage }) => {
 
       {/* Why Contact MDR / Quick Travel Assistance */}
       <section className="container section">
-        <div className="text-center reveal" style={{ marginBottom: '3rem' }}>
+        <div className="text-center" style={{ marginBottom: '3rem' }}>
           <h2 className="section-title">Quick Travel Assistance</h2>
           <p className="section-subtitle">We are committed to providing seamless support for all your travel needs.</p>
         </div>
         
         <div className="services-grid">
-          <div className="service-card reveal">
+          <div className="service-card">
             <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--dark-blue)' }}>24/7 Support</h4>
             <p style={{ color: '#64748b', fontSize: '0.95rem' }}>Our team is available round the clock to assist you with urgent bookings, route changes, or general inquiries.</p>
           </div>
-          <div className="service-card reveal" style={{ transitionDelay: '100ms' }}>
+          <div className="service-card" style={{ transitionDelay: '100ms' }}>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--dark-blue)' }}>Transparent Pricing</h4>
             <p style={{ color: '#64748b', fontSize: '0.95rem' }}>We provide clear, upfront quotes based on your exact requirements, with no hidden fees or surprise charges.</p>
           </div>
-          <div className="service-card reveal" style={{ transitionDelay: '200ms' }}>
+          <div className="service-card" style={{ transitionDelay: '200ms' }}>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--dark-blue)' }}>Expert Route Planning</h4>
             <p style={{ color: '#64748b', fontSize: '0.95rem' }}>Not sure about the best route? Our experienced team will help you plan the most efficient and scenic journey.</p>
           </div>

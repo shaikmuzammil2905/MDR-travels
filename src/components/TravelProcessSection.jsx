@@ -33,7 +33,7 @@ const TravelProcessSection = () => {
   return (
     <section className="section" style={{ background: '#fff' }}>
       <div className="container">
-        <div className="text-center reveal" style={{ marginBottom: '4rem' }}>
+        <div className="text-center" style={{ marginBottom: '4rem' }}>
           <h2 className="section-title">More Than Just a Ride</h2>
           <p className="section-subtitle">
             We've simplified the travel booking process. Experience a seamless journey from your first enquiry to your final drop-off.
@@ -42,10 +42,10 @@ const TravelProcessSection = () => {
 
         <div className="process-grid" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
           {/* Vertical connecting line */}
-          <div style={{ position: 'absolute', left: '50px', top: '40px', bottom: '40px', width: '3px', background: '#e2e8f0', zIndex: 1 }} className="process-line"></div>
+          <div className="animated-flow-line"></div>
           
           {steps.map((step, idx) => (
-            <div key={idx} className="process-card reveal" style={{ display: 'flex', alignItems: 'center', gap: '2rem', transitionDelay: `${idx * 100}ms`, position: 'relative', zIndex: 2 }}>
+            <div key={idx} className="process-card" style={{ display: 'flex', alignItems: 'center', gap: '2rem', transitionDelay: `${idx * 100}ms`, position: 'relative', zIndex: 2 }}>
               
               {/* Icon / Number Container */}
               <div style={{ flexShrink: 0, width: '100px', height: '100px', background: 'var(--white)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '4px solid #f1f5f9', position: 'relative', boxShadow: 'var(--shadow-sm)' }}>

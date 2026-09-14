@@ -163,7 +163,7 @@ const TourDetailPage = () => {
       </section>
 
       <section className="section">
-        <div className="container reveal">
+        <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '3rem', alignItems: 'start' }}>
             
             {/* Left Content */}

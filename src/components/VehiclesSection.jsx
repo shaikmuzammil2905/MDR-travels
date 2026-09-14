@@ -107,7 +107,7 @@ const VehiclesSection = ({ isHomePage }) => {
   ];
 
   const renderVehicleCard = (vehicle, idx) => (
-    <div key={idx} className="fleet-card reveal" style={{ transitionDelay: `${idx * 50}ms` }}>
+    <div key={idx} className="fleet-card" style={{ transitionDelay: `${idx * 50}ms` }}>
       <div className="fleet-img" style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
         <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div className="fleet-badge">{vehicle.type}</div>

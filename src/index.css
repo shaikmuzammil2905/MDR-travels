@@ -142,6 +142,34 @@ ul {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes lineFlowDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animated-flow-line {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+  bottom: 40px;
+  width: 4px;
+  background: #e2e8f0;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.animated-flow-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(229, 27, 35, 0), var(--primary-red), rgba(229, 27, 35, 0));
+  animation: lineFlowDown 2.5s infinite linear;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }

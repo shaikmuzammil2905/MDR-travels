@@ -56,7 +56,7 @@ const VehicleCategories = ({ isHomePage }) => {
           
           <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {categories.map((cat, idx) => (
-              <div key={idx} className="fleet-card reveal" style={{ transitionDelay: `${idx * 100}ms`, display: 'flex', flexDirection: 'column' }}>
+              <div key={idx} className="fleet-card" style={{ transitionDelay: `${idx * 100}ms`, display: 'flex', flexDirection: 'column' }}>
                 <div className="fleet-img" style={{ height: '220px', overflow: 'hidden' }}>
                   <img src={cat.image} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>

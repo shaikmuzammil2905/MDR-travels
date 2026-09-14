@@ -50,7 +50,7 @@ const AboutSection = ({ isHomePage }) => {
       {/* Mission & Story with Pictorial Representation */}
       <section className="container section">
         <div className="about-grid-story">
-          <div className="about-story-text reveal">
+          <div className="about-story-text">
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1rem' }}>
               Setting New Benchmarks in Comfort & Reliability
             </h2>
@@ -81,7 +81,7 @@ const AboutSection = ({ isHomePage }) => {
             </div>
           </div>
 
-          <div className="about-gallery-mosaic reveal">
+          <div className="about-gallery-mosaic">
             <div className="mosaic-card mosaic-large">
               <img src={busImg} alt="MDR Luxury Coach" />
               <div className="mosaic-caption">Flagship Luxury Coach</div>
@@ -103,27 +103,41 @@ const AboutSection = ({ isHomePage }) => {
       {/* Core Values Section */}
       <section className="section" style={{ background: 'var(--light-bg)' }}>
         <div className="container">
-          <div className="text-center reveal">
+          <div className="text-center" style={{ marginBottom: '3rem' }}>
             <h2 className="section-title">Why Travel With MDR?</h2>
             <p className="section-subtitle">
               Every detail of your trip is crafted with care, safety, and comfort in mind.
             </p>
           </div>
 
-          <div className="services-grid" style={{ marginTop: '2.5rem' }}>
-            {values.map((val, idx) => (
-              <div key={idx} className="service-card reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
-                <div className="service-icon-wrapper" style={{ marginBottom: '1.25rem' }}>
-                  {val.icon}
-                </div>
-                <h3 className="service-title" style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>
-                  {val.title}
-                </h3>
-                <p className="service-desc" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  {val.desc}
-                </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+            {/* Pictorial Representation */}
+            <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', height: '100%', minHeight: '400px', position: 'relative' }}>
+              <img src={vizagImg} alt="MDR Travel Experience" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', background: 'linear-gradient(transparent, rgba(0,25,65,0.9))', padding: '2rem 1.5rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 700 }}>Unmatched Comfort</h3>
+                <p style={{ opacity: 0.9, fontSize: '1rem', margin: 0 }}>Experience the joy of hassle-free travel.</p>
               </div>
-            ))}
+            </div>
+
+            {/* Content List */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {values.map((val, idx) => (
+                <div key={idx} style={{ display: 'flex', gap: '1.25rem', background: '#fff', padding: '1.5rem', borderRadius: '12px', boxShadow: 'var(--shadow-sm)' }}>
+                  <div style={{ flexShrink: 0, width: '50px', height: '50px', background: '#f1f5f9', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {val.icon}
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--dark-blue)', marginBottom: '0.4rem', fontWeight: 700 }}>
+                      {val.title}
+                    </h3>
+                    <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#475569', margin: 0 }}>
+                      {val.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

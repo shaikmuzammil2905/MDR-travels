@@ -4,7 +4,7 @@ import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 const ContactSection = () => {
   return (
     <section className="container section" style={{ paddingTop: '1rem', paddingBottom: '4rem' }}>
-      <div className="about-contact-card reveal">
+      <div className="about-contact-card">
         <div className="contact-card-content">
           <h3 style={{ fontSize: '1.8rem', color: 'var(--dark-blue)', fontWeight: 800, marginBottom: '0.75rem' }}>
             Visit or Contact Our Office

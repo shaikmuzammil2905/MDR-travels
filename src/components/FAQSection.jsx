@@ -15,12 +15,12 @@ const FAQSection = () => {
   return (
     <section className="section" style={{ background: 'var(--light-bg)' }}>
       <div className="container">
-        <div className="text-center reveal" style={{ marginBottom: '3rem' }}>
+        <div className="text-center" style={{ marginBottom: '3rem' }}>
           <h2 className="section-title">Frequently Asked Questions</h2>
           <p className="section-subtitle">Find answers to common questions about travelling with MDR Travels.</p>
         </div>
         
-        <div className="faq-container reveal" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           {faqs.map((faq, idx) => (
             <details key={idx} className="faq-item" style={{ background: '#fff', marginBottom: '1rem', borderRadius: '8px', padding: '1rem 1.5rem', cursor: 'pointer', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
               <summary style={{ fontWeight: 600, color: 'var(--dark-blue)', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
