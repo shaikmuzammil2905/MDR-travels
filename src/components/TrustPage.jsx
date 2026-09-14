@@ -106,10 +106,10 @@ const TrustPage = ({ isHomePage }) => {
             
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                <img src="/src/assets/trust_suv.png" alt="Comfortable SUV Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/trust_suv.png" alt="Comfortable SUV Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', marginTop: '2rem' }}>
-                <img src="/src/assets/trust_group.png" alt="Group Travel Comfort" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/trust_group.png" alt="Group Travel Comfort" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
           </div>

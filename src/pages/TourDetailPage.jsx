@@ -8,7 +8,7 @@ import FAQSection from '../components/FAQSection';
 const tourData = {
   'visakhapatnam-city-tour': {
     title: 'Visakhapatnam City Tour',
-    image: '/src/assets/pkg_vizag.png',
+    image: '/images/pkg_vizag.png',
     intro: "Explore Visakhapatnam's popular attractions and scenic locations in a comfortable private vehicle with a dedicated local driver.",
     duration: 'Custom duration available (Usually 1-2 Days)',
     bestFor: 'Families, Couples, and First-time Visitors',
@@ -29,7 +29,7 @@ const tourData = {
   },
   'araku-valley-tour': {
     title: 'Araku Valley Tour',
-    image: '/src/assets/pkg_araku.png',
+    image: '/images/pkg_araku.png',
     intro: "A scenic journey through the Eastern Ghats featuring mountain landscapes, valleys, viewpoints, and local attractions.",
     duration: '1 - 2 Days (Customizable)',
     bestFor: 'Nature Lovers and Weekend Getaways',
@@ -50,7 +50,7 @@ const tourData = {
   },
   'tirupati-temple-tour': {
     title: 'Tirupati Temple Tour',
-    image: '/src/assets/pkg_tirupati.png',
+    image: '/images/pkg_tirupati.png',
     intro: "A pilgrimage-focused travel option for families and devotees travelling to Tirupati and surrounding temple destinations.",
     duration: 'Custom duration available',
     bestFor: 'Devotees and Family Pilgrimages',
@@ -71,7 +71,7 @@ const tourData = {
   },
   'srisailam-tour': {
     title: 'Srisailam Spiritual Journey',
-    image: '/src/assets/pkg_srisailam.png',
+    image: '/images/pkg_srisailam.png',
     intro: "A spiritual and scenic journey combining temple travel with beautiful landscapes and comfortable road travel.",
     duration: 'Custom duration available',
     bestFor: 'Pilgrimage and Nature trips',
@@ -91,7 +91,7 @@ const tourData = {
   },
   'vijayawada-amaravati-tour': {
     title: 'Vijayawada & Amaravati Tour',
-    image: '/src/assets/pkg_vijayawada.png',
+    image: '/images/pkg_vijayawada.png',
     intro: "Explore important cultural, spiritual and heritage destinations around Vijayawada and Amaravati.",
     duration: 'Custom duration available',
     bestFor: 'Heritage and Cultural Exploration',
@@ -111,7 +111,7 @@ const tourData = {
   },
   'andhra-pradesh-multi-destination-tour': {
     title: 'Andhra Pradesh Multi-Destination Tour',
-    image: '/src/assets/pkg_multi.png',
+    image: '/images/pkg_multi.png',
     intro: "A flexible multi-day journey connecting important cities, temples and tourist destinations across Andhra Pradesh.",
     duration: 'Custom multi-day itinerary',
     bestFor: 'Extended Holidays and Complete Explorations',

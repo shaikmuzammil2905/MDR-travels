@@ -9,7 +9,7 @@ const VehicleCategories = ({ isHomePage }) => {
     {
       id: '4-seater-cars',
       title: "4-Seater Cars",
-      image: "/src/assets/car_dzire.png",
+      image: "/images/car_dzire.png",
       desc: "Comfortable and efficient, perfect for city travel, airport transfers, and couples.",
       seats: "4",
       bags: "2-3"
@@ -17,7 +17,7 @@ const VehicleCategories = ({ isHomePage }) => {
     {
       id: 'suvs',
       title: "6–7 Seater SUVs",
-      image: "/src/assets/car_innova.png",
+      image: "/images/car_innova.png",
       desc: "Spacious and comfortable options. Perfect for long-distance outstation trips and families.",
       seats: "6-7",
       bags: "3-4"
@@ -25,7 +25,7 @@ const VehicleCategories = ({ isHomePage }) => {
     {
       id: 'tempo-travellers',
       title: "Tempo Travellers",
-      image: "/src/assets/car_force12.png",
+      image: "/images/car_force12.png",
       desc: "Premium group travellers for large families, corporate outings, and extended tours.",
       seats: "12-17",
       bags: "8-10"
