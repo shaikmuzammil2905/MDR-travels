@@ -9,42 +9,42 @@ const DestinationsSection = () => {
     {
       name: "Visakhapatnam",
       desc: "The City of Destiny, famous for its beaches and scenic coastal roads.",
-      image: "/src/assets/tour_vizag_beach.jpg"
+      image: "/images/tour_vizag_beach.jpg"
     },
     {
       name: "Araku Valley",
       desc: "A breathtaking hill station known for its coffee plantations and misty mornings.",
-      image: "/src/assets/tour_araku_valley.jpg"
+      image: "/images/tour_araku_valley.jpg"
     },
     {
       name: "Lambasingi",
       desc: "The 'Kashmir of Andhra Pradesh', famous for its cool climate and apple orchards.",
-      image: "/src/assets/araku-valley.jpg"
+      image: "/images/araku-valley.jpg"
     },
     {
       name: "Tirupati",
       desc: "A major pilgrimage center surrounded by the scenic Seshachalam Hills.",
-      image: "/src/assets/tour_tirupati_temple.jpg"
+      image: "/images/tour_tirupati_temple.jpg"
     },
     {
       name: "Vijayawada",
       desc: "A vibrant city on the banks of the Krishna River, rich in culture and heritage.",
-      image: "/src/assets/vizag-tour.jpg"
+      image: "/images/vizag-tour.jpg"
     },
     {
       name: "Amaravati",
       desc: "The ancient capital known for the majestic Amaravati Stupa and Buddhist heritage.",
-      image: "/src/assets/hero-bright.png"
+      image: "/images/hero-bright.png"
     },
     {
       name: "Srisailam",
       desc: "A revered pilgrimage town located in the heart of the Nallamala forest.",
-      image: "/src/assets/image.png"
+      image: "/images/pkg_srisailam.png"
     },
     {
       name: "Rajahmundry",
       desc: "The cultural capital of Andhra Pradesh, famous for its Godavari river views.",
-      image: "/src/assets/image copy 3.png"
+      image: "/images/pkg_multi.png"
     }
   ];
 

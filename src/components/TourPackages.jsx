@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Clock, MapPin, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import EnquiryModal from './EnquiryModal';
 
 const TourPackages = ({ isHomePage }) => {
   const navigate = useNavigate();
+  const [selectedTour, setSelectedTour] = useState(null);
 
   const packages = [
     {
@@ -124,8 +126,8 @@ const TourPackages = ({ isHomePage }) => {
                     <strong>Vehicle Options:</strong> {pkg.vehicle}
                   </div>
 
-                  <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem' }}>
-                    <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/contact')}>
+                  <div className="tour-actions" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
+                    <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => setSelectedTour(pkg)}>
                       Request a Quote
                     </button>
                     <button className="btn btn-outline" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate(`/packages/${pkg.id}`)}>
@@ -138,6 +140,12 @@ const TourPackages = ({ isHomePage }) => {
           </div>
         </div>
       </section>
+
+      <EnquiryModal 
+        isOpen={!!selectedTour} 
+        onClose={() => setSelectedTour(null)} 
+        defaultService={selectedTour?.title} 
+      />
     </div>
   );
 };

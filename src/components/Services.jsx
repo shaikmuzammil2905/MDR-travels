@@ -92,14 +92,14 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer' }} onClick={() => setSelectedService(service)}>
-              <div className="service-icon-wrapper">
+            <div key={index} className="service-card reveal" style={{ transitionDelay: `${index * 100}ms`, cursor: 'pointer', textAlign: 'center', alignItems: 'center' }} onClick={() => setSelectedService(service)}>
+              <div className="service-icon-wrapper" style={{ width: '85px', height: '85px', marginBottom: '1.75rem' }}>
                 {service.icon}
               </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-desc">{service.description}</p>
-              <div className="service-actions">
-                <button className="btn btn-outline" style={{flex: 1}} onClick={(e) => { e.stopPropagation(); setSelectedService(service); }}>
+              <h3 className="service-title" style={{ fontSize: '1.65rem' }}>{service.title}</h3>
+              <p className="service-desc" style={{ fontSize: '1.05rem', color: '#64748b' }}>{service.description}</p>
+              <div className="service-actions" style={{ width: '100%', marginTop: '1.5rem' }}>
+                <button className="btn btn-outline" style={{ width: '100%', padding: '0.85rem' }} onClick={(e) => { e.stopPropagation(); setSelectedService(service); }}>
                   View Details
                 </button>
               </div>

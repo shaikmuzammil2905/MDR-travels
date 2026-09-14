@@ -31,26 +31,35 @@ const TravelProcessSection = () => {
   ];
 
   return (
-    <section className="section">
+    <section className="section" style={{ background: '#fff' }}>
       <div className="container">
-        <div className="text-center reveal" style={{ marginBottom: '3rem' }}>
+        <div className="text-center reveal" style={{ marginBottom: '4rem' }}>
           <h2 className="section-title">More Than Just a Ride</h2>
           <p className="section-subtitle">
             We've simplified the travel booking process. Experience a seamless journey from your first enquiry to your final drop-off.
           </p>
         </div>
 
-        <div className="process-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', position: 'relative' }}>
+        <div className="process-grid" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
+          {/* Vertical connecting line */}
+          <div style={{ position: 'absolute', left: '50px', top: '40px', bottom: '40px', width: '3px', background: '#e2e8f0', zIndex: 1 }} className="process-line"></div>
+          
           {steps.map((step, idx) => (
-            <div key={idx} className="process-card reveal" style={{ textAlign: 'center', transitionDelay: `${idx * 100}ms` }}>
-              <div style={{ width: '80px', height: '80px', background: '#f8fafc', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', border: '2px solid #e2e8f0', position: 'relative', zIndex: 2 }}>
+            <div key={idx} className="process-card reveal" style={{ display: 'flex', alignItems: 'center', gap: '2rem', transitionDelay: `${idx * 100}ms`, position: 'relative', zIndex: 2 }}>
+              
+              {/* Icon / Number Container */}
+              <div style={{ flexShrink: 0, width: '100px', height: '100px', background: 'var(--white)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '4px solid #f1f5f9', position: 'relative', boxShadow: 'var(--shadow-sm)' }}>
                 {step.icon}
-                <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '30px', height: '30px', background: 'var(--primary-red)', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1rem' }}>
+                <div style={{ position: 'absolute', top: '0', right: '0', width: '32px', height: '32px', background: 'var(--primary-red)', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1.1rem', boxShadow: 'var(--shadow-sm)' }}>
                   {idx + 1}
                 </div>
               </div>
-              <h3 style={{ fontSize: '1.2rem', color: 'var(--dark-blue)', marginBottom: '0.75rem' }}>{step.title}</h3>
-              <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.5' }}>{step.desc}</p>
+              
+              {/* Content Box */}
+              <div style={{ flexGrow: 1, background: '#f8fafc', padding: '2rem', borderRadius: '16px', border: '1px solid #f1f5f9', boxShadow: '0 4px 10px rgba(0,0,0,0.02)' }}>
+                <h3 style={{ fontSize: '1.4rem', color: 'var(--dark-blue)', marginBottom: '0.75rem', fontWeight: 700 }}>{step.title}</h3>
+                <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.6', margin: 0 }}>{step.desc}</p>
+              </div>
             </div>
           ))}
         </div>
