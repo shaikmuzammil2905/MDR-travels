@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustPage from './components/TrustPage';
 import ContactPage from './components/ContactPage';
+import ContactSection from './components/ContactSection';
 import Services from './components/Services';
 import FleetPricing from './components/FleetPricing';
 import TourPackages from './components/TourPackages';
@@ -66,6 +67,7 @@ const Home = () => (
       <BookingForm />
     </div>
     <Services />
+    <ContactSection />
   </Layout>
 );
 
