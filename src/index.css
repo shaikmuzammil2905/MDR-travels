@@ -1672,3 +1672,23 @@ ul {
     flex-direction: column;
   }
 }
+
+/* ========================================================
+   Detail Pages (Tour / Service) Responsive Layout
+   ======================================================== */
+.detail-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 3rem;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .detail-page-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

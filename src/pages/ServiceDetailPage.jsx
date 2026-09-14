@@ -80,9 +80,10 @@ const ServiceDetailPage = () => {
 
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr minmax(300px, 400px)', gap: '3rem', alignItems: 'start' }}>
+          <div className="detail-page-layout">
             
-            <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>
+            {/* Left Content */}
+            <div className="detail-content">
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '1.8rem' }}>What's Included?</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {data.features.map((feature, idx) => (
