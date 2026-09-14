@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustStrip from './components/TrustStrip';
+import TrustPage from './components/TrustPage';
+import ContactPage from './components/ContactPage';
 import Services from './components/Services';
 import FleetPricing from './components/FleetPricing';
 import TourPackages from './components/TourPackages';
@@ -64,7 +65,6 @@ const Home = () => (
     <div className="container booking-container">
       <BookingForm />
     </div>
-    <TrustStrip />
     <Services />
   </Layout>
 );
@@ -93,6 +93,18 @@ const AboutPage = () => (
   </Layout>
 );
 
+const Trust = () => (
+  <Layout>
+    <TrustPage />
+  </Layout>
+);
+
+const Contact = () => (
+  <Layout>
+    <ContactPage />
+  </Layout>
+);
+
 function App() {
   return (
     <Router>
@@ -103,6 +115,8 @@ function App() {
         <Route path="/vehicles" element={<VehiclesPage />} />
         <Route path="/packages" element={<PackagesPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/trust" element={<Trust />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

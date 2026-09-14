@@ -219,6 +219,20 @@ const Navbar = () => {
           >
             About
           </Link>
+
+          <Link 
+            to="/trust" 
+            className={`nav-link ${location.pathname === '/trust' ? 'active' : ''}`}
+          >
+            Why Trust Us
+          </Link>
+
+          <Link 
+            to="/contact" 
+            className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+          >
+            Contact
+          </Link>
         </div>
 
         <div className="nav-actions">
@@ -377,6 +391,22 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
+          </Link>
+
+          <Link 
+            to="/trust" 
+            className={`mobile-nav-link ${location.pathname === '/trust' ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Why Trust Us
+          </Link>
+
+          <Link 
+            to="/contact" 
+            className={`mobile-nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Contact
           </Link>
 
           <div className="mobile-actions-wrapper">
