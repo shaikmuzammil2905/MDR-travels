@@ -1,188 +1,138 @@
-import React, { useState } from 'react';
-import { Map, Clock, CheckCircle, MessageCircle } from 'lucide-react';
-import arakuImage from '../assets/img9.png';
-import lambasingiImage from '../assets/araku-valley.jpg';
-import vizagImage from '../assets/vizag-tour.jpg';
-import Modal from './Modal';
+import React from 'react';
+import { Clock, MapPin, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const TourPackages = () => {
-  const [selectedPackage, setSelectedPackage] = useState(null);
+const TourPackages = ({ isHomePage }) => {
+  const navigate = useNavigate();
 
   const packages = [
     {
-      id: 'araku',
-      title: 'Araku Valley One Day Tour',
-      tag: 'Most Popular',
-      image: arakuImage,
-      duration: '1 Day Trip',
-      route: 'Visakhapatnam to Araku',
-      description: 'Experience the breathtaking beauty of Araku Valley. Our comprehensive day tour covers all major attractions with comfortable travel and expert guidance.',
-      highlights: [
-        'Borra Caves',
-        'Coffee Museum',
-        'Padmapuram Gardens',
-        'Tribal Museum',
-        'Galikonda Viewpoint'
-      ],
-      modalHighlights: [
-        'Scenic morning drive from Visakhapatnam to Araku',
-        'Explore the million-year-old natural Borra Caves',
-        'Visit the colorful Padmapuram Botanical Gardens',
-        'Taste authentic organic coffee at the Araku Coffee Museum',
-        'Discover local tribal culture & crafts at Tribal Museum',
-        'Safe return drop-off to your doorstep in Visakhapatnam'
-      ]
+      title: "Visakhapatnam City Tour",
+      image: "/src/assets/tour_vizag_beach.jpg",
+      desc: "Explore Visakhapatnam's popular attractions and scenic locations in a comfortable private vehicle.",
+      duration: "Custom duration available",
+      bestFor: "Families, Couples, and First-time Visitors",
+      highlights: ["RK Beach", "Kailasagiri", "Rushikonda Beach", "Submarine Museum", "Simhachalam Temple"],
+      vehicle: "Sedan / SUV / Tempo Traveller"
     },
     {
-      id: 'lambasingi',
-      title: 'Lambasingi Hills "Kashmir of AP"',
-      tag: 'Hill Station',
-      image: lambasingiImage,
-      duration: '2 Days / 1 Night',
-      route: 'Visakhapatnam to Lambasingi',
-      description: 'Discover the misty clouds and chilly heights of Lambasingi. Enjoy apple orchards, strawberry farms, and serene morning mist in Andhra Pradesh\'s coolest getaway.',
-      highlights: [
-        'Cloud Peak View',
-        'Thajangi Reservoir',
-        'Susan Garden Flowers',
-        'Strawberry Farms',
-        'Kothapalli Waterfalls'
-      ],
-      modalHighlights: [
-        'Comfortable ghat road journey through Eastern Ghats',
-        'Experience freezing morning temperatures and blanket of fog',
-        'Visit the scenic Thajangi Reservoir and boating points',
-        'Explore the vibrant Susan Garden yellow flower fields',
-        'Tour local strawberry & apple plantations',
-        'Expert hilly terrain drivers with dedicated assistance'
-      ]
+      title: "Araku Valley Tour",
+      image: "/src/assets/tour_araku_valley.jpg",
+      desc: "A scenic journey through the Eastern Ghats featuring mountain landscapes, valleys, viewpoints and local attractions.",
+      duration: "1 - 2 Days (Customizable)",
+      bestFor: "Nature Lovers and Weekend Getaways",
+      highlights: ["Borra Caves", "Coffee Plantations", "Tribal Museum", "Galikonda Viewpoint", "Padmapuram Gardens"],
+      vehicle: "SUV / Sedan recommended"
     },
     {
-      id: 'vizag',
-      title: 'Vizag Coastal City Sightseeing',
-      tag: 'City & Beach',
-      image: vizagImage,
-      duration: 'Full Day Tour',
-      route: 'Across Visakhapatnam',
-      description: 'Explore the City of Destiny in style. Tour the coastline, historic naval museums, hilltop temples, and panoramic viewpoints with complete comfort.',
-      highlights: [
-        'Kailasagiri Ropeway',
-        'Submarine Museum',
-        'Rishikonda Beach',
-        'Simhachalam Temple',
-        'TU 142 Aircraft Museum'
-      ],
-      modalHighlights: [
-        'Panoramic hilltop views of the Bay of Bengal from Kailasagiri',
-        'Visit the historic INS Kursura Submarine Museum at RK Beach',
-        'Explore the TU 142 Aircraft War Museum',
-        'Relax and enjoy water sports at the pristine Rishikonda Beach',
-        'Seek blessings at the ancient Sri Varaha Lakshmi Narasimha Temple',
-        'Flexible drop-offs and custom itinerary adjustments'
-      ]
+      title: "Tirupati Temple Tour",
+      image: "/src/assets/tour_tirupati_temple.jpg",
+      desc: "A pilgrimage-focused travel option for families and devotees travelling to Tirupati and surrounding temple destinations.",
+      duration: "Custom duration available",
+      bestFor: "Devotees and Family Pilgrimages",
+      highlights: ["Sri Venkateswara Temple", "Padmavathi Temple", "Kapila Theertham", "Srikalahasti", "Safe outstation travel"],
+      vehicle: "Innova Crysta / Tempo Traveller"
+    },
+    {
+      title: "Srisailam Spiritual Journey",
+      image: "/src/assets/vizag-tour.jpg", // Reusing existing beautiful landscape as placeholder
+      desc: "A spiritual and scenic journey combining temple travel with beautiful landscapes and comfortable road travel.",
+      duration: "Custom duration available",
+      bestFor: "Pilgrimage and Nature trips",
+      highlights: ["Mallikarjuna Swamy Temple", "Pathala Ganga", "Srisailam Dam", "Sikharam", "Forest scenic routes"],
+      vehicle: "Premium SUV / Sedan"
+    },
+    {
+      title: "Vijayawada & Amaravati Tour",
+      image: "/src/assets/hero-bright.png", // Reusing hero image for road trip vibe
+      desc: "Explore important cultural, spiritual and heritage destinations around Vijayawada and Amaravati.",
+      duration: "Custom duration available",
+      bestFor: "Heritage and Cultural Exploration",
+      highlights: ["Kanakadurga Temple", "Bhavani Island", "Undavalli Caves", "Amaravati Stupa", "Prakasam Barrage"],
+      vehicle: "Sedan / SUV"
+    },
+    {
+      title: "Andhra Pradesh Multi-Destination",
+      image: "/src/assets/araku-valley.jpg", // Reusing existing araku
+      desc: "A flexible multi-day journey connecting important cities, temples and tourist destinations across Andhra Pradesh.",
+      duration: "Custom multi-day itinerary",
+      bestFor: "Extended Holidays and Complete Explorations",
+      highlights: ["Customizable route", "Flexible schedule", "Multiple cities", "Dedicated driver", "Comfortable long-distance vehicle"],
+      vehicle: "Premium SUV / Tempo Traveller"
     }
   ];
 
   return (
-    <section id="packages" className="section" style={{ background: 'var(--light-bg)' }}>
-      <div className="container">
-        <div className="text-center reveal">
-          <h2 className="section-title">Popular Tour Packages</h2>
-          <p className="section-subtitle">
-            Experience the beauty of Andhra Pradesh with our specially curated, comfortable tour packages.
-          </p>
-        </div>
-
-        <div className="tour-packages-grid">
-          {packages.map((pkg) => (
-            <div 
-              key={pkg.id} 
-              className="package-card reveal" 
-              style={{ cursor: 'pointer' }} 
-              onClick={() => setSelectedPackage(pkg)}
-            >
-              <div className="package-img">
-                <img src={pkg.image} alt={pkg.title} />
-                <span className="package-badge">{pkg.tag}</span>
-              </div>
-              <div className="package-content">
-                <h3 className="package-title">{pkg.title}</h3>
-                <p className="package-desc">{pkg.description}</p>
-                
-                <div className="package-highlights">
-                  <div className="highlight-item">
-                    <Clock size={16} className="text-primary-blue" /> 
-                    <span>{pkg.duration}</span>
-                  </div>
-                  <div className="highlight-item">
-                    <Map size={16} className="text-primary-blue" /> 
-                    <span>{pkg.route}</span>
-                  </div>
-                  {pkg.highlights.map((h, i) => (
-                    <div key={i} className="highlight-item">
-                      <CheckCircle size={16} className="text-primary-blue" /> 
-                      <span>{h}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="package-actions">
-                  <button 
-                    className="btn btn-primary" 
-                    style={{ width: '100%', justifyContent: 'center' }}
-                    onClick={(e) => { 
-                      e.stopPropagation(); 
-                      setSelectedPackage(pkg); 
-                    }}
-                  >
-                    View Package Details
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <Modal 
-        isOpen={!!selectedPackage} 
-        onClose={() => setSelectedPackage(null)} 
-        title={selectedPackage?.title || 'Tour Details'}
-      >
-        {selectedPackage && (
-          <div>
-            <img 
-              src={selectedPackage.image} 
-              alt={selectedPackage.title} 
-              style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: 'var(--radius-sm)', marginBottom: '1.5rem' }} 
-            />
-            <h4 style={{ fontSize: '1.25rem', color: 'var(--dark-blue)', marginBottom: '0.75rem' }}>
-              Tour Itinerary & Highlights
-            </h4>
-            <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-              {selectedPackage.description}
+    <div className="packages-page-wrapper" style={{ paddingBottom: '4rem' }}>
+      {/* Hero */}
+      {!isHomePage && (
+        <section className="about-hero-strip">
+          <div className="container text-center">
+            <h1 className="about-main-title">Popular Tour Packages</h1>
+            <p className="about-main-subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
+              Discover the beauty of Andhra Pradesh with our carefully crafted travel packages. Enjoy a comfortable, private and stress-free journey with MDR Travels.
             </p>
-            <ul style={{ listStyleType: 'none', paddingLeft: '0', marginBottom: '1.5rem', color: '#555', lineHeight: 1.6, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {selectedPackage.modalHighlights.map((item, idx) => (
-                <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
-                  <CheckCircle size={18} className="text-primary-blue" style={{ flexShrink: 0, marginTop: '0.2rem' }} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <a 
-              href={`https://wa.me/918247096395?text=${encodeURIComponent(`Hi MDR Travels, I would like to inquire and book the ${selectedPackage.title}. Could you share the detailed package cost and vehicle options?`)}`} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn btn-whatsapp"
-              style={{ width: '100%', fontSize: '1.1rem', padding: '1rem', justifyContent: 'center' }}
-            >
-              <MessageCircle size={20} /> Book on WhatsApp
-            </a>
           </div>
-        )}
-      </Modal>
-    </section>
+        </section>
+      )}
+
+      {/* Packages Grid */}
+      <section className="section">
+        <div className="container">
+          <div className="packages-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2.5rem' }}>
+            {packages.map((pkg, idx) => (
+              <div key={idx} className="package-card reveal" style={{ transitionDelay: `${idx * 100}ms`, background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column' }}>
+                <div className="package-img" style={{ height: '240px', position: 'relative' }}>
+                  <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', padding: '2rem 1.5rem 1rem' }}>
+                    <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: 0 }}>{pkg.title}</h3>
+                  </div>
+                </div>
+                
+                <div className="package-content" style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                  <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{pkg.desc}</p>
+                  
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', color: 'var(--dark-blue)' }}>
+                    <Clock size={18} className="text-primary-blue" />
+                    <span style={{ fontSize: '0.95rem', fontWeight: 500 }}>{pkg.duration}</span>
+                  </div>
+                  
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', color: 'var(--dark-blue)' }}>
+                    <MapPin size={18} className="text-primary-blue" />
+                    <span style={{ fontSize: '0.95rem', fontWeight: 500 }}>{pkg.bestFor}</span>
+                  </div>
+
+                  <div style={{ marginBottom: '1.5rem', padding: '1rem', background: '#f8fafc', borderRadius: '8px' }}>
+                    <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: 'var(--primary-blue)' }}>Highlights:</strong>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                      {pkg.highlights.map((h, i) => (
+                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.9rem', color: '#475569', marginBottom: '0.25rem' }}>
+                          <CheckCircle2 size={16} className="text-primary-blue" style={{ marginTop: '2px', flexShrink: 0 }} />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: '#64748b' }}>
+                    <strong>Vehicle Options:</strong> {pkg.vehicle}
+                  </div>
+
+                  <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem' }}>
+                    <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/contact')}>
+                      Request a Quote
+                    </button>
+                    <button className="btn btn-outline" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/contact')}>
+                      View Tour
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

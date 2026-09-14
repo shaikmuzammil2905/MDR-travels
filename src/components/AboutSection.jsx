@@ -6,7 +6,7 @@ import suvImg from '../assets/img15.png';
 import tempoImg from '../assets/img16.png';
 import vizagImg from '../assets/vizag-tour.jpg';
 
-const AboutSection = () => {
+const AboutSection = ({ isHomePage }) => {
   const values = [
     {
       icon: <ShieldCheck size={32} className="text-primary-blue" />,
@@ -33,17 +33,19 @@ const AboutSection = () => {
   return (
     <div className="about-page-wrapper">
       {/* Top Banner */}
-      <section className="about-hero-strip">
-        <div className="container text-center">
-          <div className="badge-pill">
-            <Sparkles size={16} /> Trusted Travel Experience
+      {!isHomePage && (
+        <section className="about-hero-strip">
+          <div className="container text-center">
+            <div className="badge-pill">
+              <Sparkles size={16} /> Trusted Travel Experience
+            </div>
+            <h1 className="about-main-title">About MDR Travels</h1>
+            <p className="about-main-subtitle">
+              Visakhapatnam’s trusted travel and transport partner, delivering safe, luxurious, and affordable journeys across Andhra Pradesh.
+            </p>
           </div>
-          <h1 className="about-main-title">About MDR Travels</h1>
-          <p className="about-main-subtitle">
-            Visakhapatnam’s trusted travel and transport partner, delivering safe, luxurious, and affordable journeys across Andhra Pradesh.
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Mission & Story with Pictorial Representation */}
       <section className="container section">

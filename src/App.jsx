@@ -6,8 +6,11 @@ import TrustPage from './components/TrustPage';
 import ContactPage from './components/ContactPage';
 import ContactSection from './components/ContactSection';
 import Services from './components/Services';
-import FleetPricing from './components/FleetPricing';
+import VehiclesSection from './components/VehiclesSection';
 import TourPackages from './components/TourPackages';
+import DestinationsSection from './components/DestinationsSection';
+import TravelProcessSection from './components/TravelProcessSection';
+import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
 import AboutSection from './components/AboutSection';
@@ -66,7 +69,13 @@ const Home = () => (
     <div className="container booking-container">
       <BookingForm />
     </div>
-    <Services />
+    <AboutSection isHomePage={true} />
+    <TrustPage isHomePage={true} />
+    <VehiclesSection isHomePage={true} />
+    <TourPackages isHomePage={true} />
+    <DestinationsSection />
+    <TravelProcessSection />
+    <FAQSection />
     <ContactSection />
   </Layout>
 );
@@ -79,7 +88,7 @@ const ServicesPage = () => (
 
 const VehiclesPage = () => (
   <Layout>
-    <FleetPricing />
+    <VehiclesSection />
   </Layout>
 );
 
