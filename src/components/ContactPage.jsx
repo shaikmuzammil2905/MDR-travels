@@ -3,7 +3,7 @@ import { MapPin, Phone, MessageCircle, Mail, Send, ChevronDown, CheckCircle2 } f
 import ContactSection from './ContactSection';
 import FAQSection from './FAQSection';
 
-const ContactPage = () => {
+const ContactPage = ({ isHomePage }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -18,7 +18,6 @@ const ContactPage = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showToast, setShowToast] = useState(false);
 
   const tripTypes = [
     "One Way",
@@ -65,38 +64,27 @@ const ContactPage = () => {
 *Vehicle:* ${formData.vehicleType}%0A
 *Requirements:* ${formData.message || 'None'}`;
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 4000);
-      window.open(`https://wa.me/918247096395?text=${message}`, '_blank');
-      setFormData({
-        name: '', phone: '', email: '', pickup: '', destination: '',
-        date: '', passengers: '', tripType: 'One Way', vehicleType: '4-Seater Car', message: ''
-      });
-    }, 1000);
+    setIsSubmitting(false);
+    window.open(`https://wa.me/918247096395?text=${message}`, '_blank');
+    setFormData({
+      name: '', phone: '', email: '', pickup: '', destination: '',
+      date: '', passengers: '', tripType: 'One Way', vehicleType: '4-Seater Car', message: ''
+    });
   };
 
   return (
     <div className="contact-page-wrapper">
-      {/* Toast Notification */}
-      <div className={`toast-notification ${showToast ? 'show' : ''}`}>
-        <CheckCircle2 size={24} className="toast-icon" />
-        <div>
-          <h4>Enquiry Sent!</h4>
-          <p>Redirecting you to WhatsApp to complete your request...</p>
-        </div>
-      </div>
-
       {/* Hero Banner */}
-      <section className="about-hero-strip">
-        <div className="container text-center">
-          <h1 className="about-main-title">Plan Your Journey With MDR Travels</h1>
-          <p className="about-main-subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            Have a question, need a vehicle, or planning a trip across Visakhapatnam, Andhra Pradesh or nearby destinations? Send us your travel requirements and our team will help you plan your journey.
-          </p>
-        </div>
-      </section>
+      {!isHomePage && (
+        <section className="about-hero-strip">
+          <div className="container text-center">
+            <h1 className="about-main-title">Plan Your Journey With MDR Travels</h1>
+            <p className="about-main-subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
+              Have a question, need a vehicle, or planning a trip across Visakhapatnam, Andhra Pradesh or nearby destinations? Send us your travel requirements and our team will help you plan your journey.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Contact Info Cards */}
       <ContactSection />

@@ -75,8 +75,7 @@ const Home = () => (
     <TourPackages isHomePage={true} />
     <DestinationsSection />
     <TravelProcessSection />
-    <FAQSection />
-    <ContactSection />
+    <ContactPage isHomePage={true} />
   </Layout>
 );
 

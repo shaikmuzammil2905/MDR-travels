@@ -1257,6 +1257,10 @@ ul {
   .about-contact-card {
     padding: 1.75rem;
   }
+  .about-contact-items-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* Footer */
