@@ -954,6 +954,16 @@ ul {
   margin-top: 1rem;
 }
 
+@media (max-width: 480px) {
+  .modal-actions {
+    flex-direction: column;
+  }
+  .modal-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .quote-submit-btn {
   background: #F59E0B;
   color: #0F172A;
@@ -1581,3 +1591,84 @@ ul {
   }
 }
 
+/* ========================================================
+   Contact Page Responsive Form Classes
+   ======================================================== */
+.contact-form-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.responsive-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-split-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-buttons-row {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.form-action-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* Base form inputs ensuring NO OVERFLOW */
+.form-input, .form-control, textarea, select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contact-form-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .form-container {
+    padding: 1.25rem;
+  }
+  .responsive-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-split-row {
+    grid-template-columns: 1fr;
+  }
+  .form-buttons-row {
+    flex-direction: column;
+  }
+}

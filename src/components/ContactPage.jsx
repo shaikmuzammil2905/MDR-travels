@@ -92,8 +92,8 @@ const ContactPage = ({ isHomePage }) => {
       {/* Contact Form Section */}
       <section className="section" style={{ background: 'var(--light-bg)' }}>
         <div className="container">
-          <div className="contact-form-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem' }}>
-            <div className="reveal">
+          <div className="contact-form-layout">
+            <div data-aos="fade-right">
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1rem' }}>Send Us Your Travel Requirements</h2>
               <p style={{ color: '#64748b', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: '1.6' }}>
                 Fill out the form below with your journey details, and we'll instantly connect you to our WhatsApp support team with a ready-to-send summary.
@@ -121,15 +121,15 @@ const ContactPage = ({ isHomePage }) => {
               </div>
             </div>
 
-            <div className="form-container" style={{ background: '#fff', padding: '2rem', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+            <div className="form-container" data-aos="fade-left">
               <form onSubmit={handleSubmit}>
-                <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div style={{ gridColumn: '1 / -1' }}>
+                <div className="responsive-form-grid">
+                  <div className="form-full-width">
                     <label>Full Name *</label>
                     <input type="text" name="name" className="form-input" value={formData.name} onChange={handleChange} required placeholder="Enter your full name" />
                   </div>
                   
-                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="form-split-row">
                     <div>
                       <label>Phone Number *</label>
                       <input type="tel" name="phone" className="form-input" value={formData.phone} onChange={handleChange} required placeholder="10-digit number" />
@@ -171,16 +171,16 @@ const ContactPage = ({ isHomePage }) => {
                     </select>
                   </div>
 
-                  <div style={{ gridColumn: '1 / -1' }}>
+                  <div className="form-full-width">
                     <label>Message / Travel Requirements</label>
                     <textarea name="message" className="form-input" value={formData.message} onChange={handleChange} placeholder="Any specific requirements?" rows="3"></textarea>
                   </div>
 
-                  <div style={{ gridColumn: '1 / -1', marginTop: '1rem', display: 'flex', gap: '1rem', flexDirection: 'column' }}>
-                    <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }} disabled={isSubmitting}>
+                  <div className="form-buttons-row">
+                    <button type="submit" className="btn btn-primary form-action-btn" disabled={isSubmitting}>
                       {isSubmitting ? 'Processing...' : <><Send size={20} /> Send Enquiry</>}
                     </button>
-                    <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
+                    <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp form-action-btn">
                       <MessageCircle size={20} /> WhatsApp Us Directly
                     </a>
                   </div>

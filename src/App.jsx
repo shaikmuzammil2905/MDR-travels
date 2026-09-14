@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustPage from './components/TrustPage';
@@ -30,20 +32,15 @@ const ScrollToTop = () => {
 
 const Layout = ({ children }) => {
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const hiddenElements = document.querySelectorAll('.reveal');
-    hiddenElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      hiddenElements.forEach((el) => observer.unobserve(el));
-    };
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50,
+      disable: 'mobile' // Disable advanced animations on mobile to prevent overflow/layout shifts, or use 'phone'
+    });
+    
+    // Fallback: remove 'reveal' logic, just refresh AOS if children change
+    AOS.refresh();
   }, [children]);
 
   return (
