@@ -51,23 +51,26 @@ const Navbar = () => {
   };
 
   const servicesList = [
-    { title: "Local Car Rentals", path: "/services" },
-    { title: "Outstation Taxi Service", path: "/services" },
-    { title: "Araku Tour Packages", path: "/services" },
-    { title: "Airport Pickup & Drop", path: "/services" },
-    { title: "Railway Station Pickup & Drop", path: "/services" }
+    { title: "Local City Travel", path: "/services/local-city-travel" },
+    { title: "Airport Transfers", path: "/services/airport-transfer" },
+    { title: "Outstation Travel", path: "/services/outstation-travel" },
+    { title: "Family Trips", path: "/services/family-trips" },
+    { title: "Pilgrimage Travel", path: "/services/pilgrimage-travel" },
+    { title: "Group Tours", path: "/services/group-tours" }
   ];
 
   const vehiclesList = [
-    { title: "Sedan (4 Seater) - Dzire / Etios", path: "/vehicles" },
-    { title: "SUV (6-7 Seater) - Innova / Ertiga", path: "/vehicles" },
-    { title: "Tempo Traveller (12-14 Seater)", path: "/vehicles" }
+    { title: "4-Seater Cars", path: "/vehicles/4-seater-cars" },
+    { title: "6-7 Seater SUVs", path: "/vehicles/suvs" },
+    { title: "Tempo Travellers", path: "/vehicles/tempo-travellers" }
   ];
 
   const packagesList = [
-    { title: "Araku Valley One Day Tour", path: "/packages" },
-    { title: "Lambasingi Hills Tour", path: "/packages" },
-    { title: "Vizag City Sightseeing", path: "/packages" }
+    { title: "Visakhapatnam City Tour", path: "/packages/visakhapatnam-city-tour" },
+    { title: "Araku Valley Tour", path: "/packages/araku-valley-tour" },
+    { title: "Tirupati Temple Tour", path: "/packages/tirupati-temple-tour" },
+    { title: "Srisailam Tour", path: "/packages/srisailam-tour" },
+    { title: "Vijayawada & Amaravati", path: "/packages/vijayawada-amaravati-tour" }
   ];
 
   const isServicesActive = location.pathname === '/services';

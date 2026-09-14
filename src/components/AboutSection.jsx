@@ -128,6 +128,48 @@ const AboutSection = ({ isHomePage }) => {
         </div>
       </section>
 
+      {!isHomePage && (
+        <>
+          <section className="section">
+            <div className="container">
+              <div className="reveal" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+                <h2 className="section-title">Our Service Philosophy</h2>
+                <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '2.5rem' }}>
+                  We believe that comfortable travel shouldn't be complicated. By focusing on passenger comfort, driver experience, and diverse vehicle choices, we aim to be your first call for all travel needs.
+                </p>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', textAlign: 'left' }}>
+                  <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px' }}>
+                    <h3 style={{ fontSize: '1.3rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Driver Experience</h3>
+                    <p style={{ color: '#64748b', lineHeight: '1.6' }}>Our drivers bring years of local and outstation driving experience. They know the best routes, the smoothest highways, and the safest resting stops.</p>
+                  </div>
+                  <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px' }}>
+                    <h3 style={{ fontSize: '1.3rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Passenger Comfort</h3>
+                    <p style={{ color: '#64748b', lineHeight: '1.6' }}>Every vehicle is thoroughly cleaned before pickup. We ensure working ACs, comfortable seats, and sufficient luggage space for your journey.</p>
+                  </div>
+                  <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px' }}>
+                    <h3 style={{ fontSize: '1.3rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Vehicle Choices</h3>
+                    <p style={{ color: '#64748b', lineHeight: '1.6' }}>From agile 4-seater sedans for city runs to 17-seater Tempo Travellers for big groups, we offer a vehicle tailored to your specific requirements.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section className="section" style={{ background: 'var(--dark-blue)', color: '#fff', textAlign: 'center' }}>
+            <div className="container">
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 800 }}>Ready to Start Your Journey?</h2>
+              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: '#ccc', maxWidth: '600px', margin: '0 auto 2rem' }}>
+                Contact us today for a transparent quote on local, outstation, family, group, or pilgrimage travel.
+              </p>
+              <a href="https://wa.me/918247096395" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </section>
+        </>
+      )}
+
     </div>
   );
 };

@@ -7,8 +7,9 @@ const TourPackages = ({ isHomePage }) => {
 
   const packages = [
     {
+      id: "visakhapatnam-city-tour",
       title: "Visakhapatnam City Tour",
-      image: "/src/assets/tour_vizag_beach.jpg",
+      image: "/src/assets/pkg_vizag.png",
       desc: "Explore Visakhapatnam's popular attractions and scenic locations in a comfortable private vehicle.",
       duration: "Custom duration available",
       bestFor: "Families, Couples, and First-time Visitors",
@@ -16,8 +17,9 @@ const TourPackages = ({ isHomePage }) => {
       vehicle: "Sedan / SUV / Tempo Traveller"
     },
     {
+      id: "araku-valley-tour",
       title: "Araku Valley Tour",
-      image: "/src/assets/tour_araku_valley.jpg",
+      image: "/src/assets/pkg_araku.png",
       desc: "A scenic journey through the Eastern Ghats featuring mountain landscapes, valleys, viewpoints and local attractions.",
       duration: "1 - 2 Days (Customizable)",
       bestFor: "Nature Lovers and Weekend Getaways",
@@ -25,8 +27,9 @@ const TourPackages = ({ isHomePage }) => {
       vehicle: "SUV / Sedan recommended"
     },
     {
+      id: "tirupati-temple-tour",
       title: "Tirupati Temple Tour",
-      image: "/src/assets/tour_tirupati_temple.jpg",
+      image: "/src/assets/pkg_tirupati.png",
       desc: "A pilgrimage-focused travel option for families and devotees travelling to Tirupati and surrounding temple destinations.",
       duration: "Custom duration available",
       bestFor: "Devotees and Family Pilgrimages",
@@ -34,8 +37,9 @@ const TourPackages = ({ isHomePage }) => {
       vehicle: "Innova Crysta / Tempo Traveller"
     },
     {
+      id: "srisailam-tour",
       title: "Srisailam Spiritual Journey",
-      image: "/src/assets/vizag-tour.jpg", // Reusing existing beautiful landscape as placeholder
+      image: "/src/assets/pkg_srisailam.png",
       desc: "A spiritual and scenic journey combining temple travel with beautiful landscapes and comfortable road travel.",
       duration: "Custom duration available",
       bestFor: "Pilgrimage and Nature trips",
@@ -43,8 +47,9 @@ const TourPackages = ({ isHomePage }) => {
       vehicle: "Premium SUV / Sedan"
     },
     {
+      id: "vijayawada-amaravati-tour",
       title: "Vijayawada & Amaravati Tour",
-      image: "/src/assets/hero-bright.png", // Reusing hero image for road trip vibe
+      image: "/src/assets/pkg_vijayawada.png",
       desc: "Explore important cultural, spiritual and heritage destinations around Vijayawada and Amaravati.",
       duration: "Custom duration available",
       bestFor: "Heritage and Cultural Exploration",
@@ -52,8 +57,9 @@ const TourPackages = ({ isHomePage }) => {
       vehicle: "Sedan / SUV"
     },
     {
+      id: "andhra-pradesh-multi-destination-tour",
       title: "Andhra Pradesh Multi-Destination",
-      image: "/src/assets/araku-valley.jpg", // Reusing existing araku
+      image: "/src/assets/pkg_multi.png",
       desc: "A flexible multi-day journey connecting important cities, temples and tourist destinations across Andhra Pradesh.",
       duration: "Custom multi-day itinerary",
       bestFor: "Extended Holidays and Complete Explorations",
@@ -122,7 +128,7 @@ const TourPackages = ({ isHomePage }) => {
                     <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/contact')}>
                       Request a Quote
                     </button>
-                    <button className="btn btn-outline" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/contact')}>
+                    <button className="btn btn-outline" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate(`/packages/${pkg.id}`)}>
                       View Tour
                     </button>
                   </div>

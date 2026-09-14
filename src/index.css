@@ -468,10 +468,10 @@ ul {
 .booking-card-floating {
   background: var(--white);
   border-radius: 20px;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 16px 36px rgba(0, 25, 65, 0.12);
+  padding: 2.5rem 3rem;
+  box-shadow: 0 20px 40px rgba(0, 25, 65, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  max-width: 860px;
+  max-width: 900px;
   margin: -65px auto 3rem auto;
   position: relative;
   z-index: 30;
@@ -511,11 +511,13 @@ ul {
 }
 .form-control {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 1rem 1.25rem;
   border: 1px solid #cbd5e1;
   border-radius: var(--radius-sm);
   font-family: var(--font-main);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--dark-text);
   transition: border-color var(--transition-fast);
   background-color: #fff;
 }
@@ -799,7 +801,7 @@ ul {
 
 /* Common Section padding */
 .section {
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 
 /* Quote Modal Styles */
@@ -913,9 +915,9 @@ ul {
   }
   
   .form-control {
-    font-size: 14px !important;
-    padding: 12px 10px !important;
-    height: 48px !important;
+    font-size: 15px !important;
+    padding: 14px 12px !important;
+    height: 52px !important;
   }
   
   /* WhatsApp button safe area */

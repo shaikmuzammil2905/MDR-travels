@@ -13,7 +13,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Comfortable and efficient, perfect for city travel and airport transfers.",
       ideal: "Airport transfers, couples, small families and city travel.",
-      image: "/src/assets/sedan_dzire_white.jpg"
+      image: "/src/assets/car_dzire.png"
     },
     {
       name: "Hyundai Aura",
@@ -22,7 +22,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Smooth ride with premium interiors for a relaxing journey.",
       ideal: "Business travel and comfortable city errands.",
-      image: "/src/assets/sedan_silver_aura.jpg"
+      image: "/src/assets/car_aura.png"
     },
     {
       name: "Tata Tigor",
@@ -31,7 +31,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Safe and sturdy compact sedan for safe local travel.",
       ideal: "Local sightseeing and short trips.",
-      image: "/src/assets/img14.png"
+      image: "/src/assets/car_tigor.png"
     },
     {
       name: "Hyundai Grand i10 Nios",
@@ -40,7 +40,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 1,
       desc: "Compact and agile, great for navigating busy city streets.",
       ideal: "Quick city commutes and solo travelers.",
-      image: "/src/assets/img10.png"
+      image: "/src/assets/car_i10.png"
     }
   ];
 
@@ -52,7 +52,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 4,
       desc: "The gold standard for long-distance comfort and reliability.",
       ideal: "Long-distance trips, family tours and outstation travel.",
-      image: "/src/assets/suv_innova_white.jpg"
+      image: "/src/assets/car_innova.png"
     },
     {
       name: "Maruti Suzuki Ertiga",
@@ -61,7 +61,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 3,
       desc: "Spacious and economical for medium-sized family trips.",
       ideal: "Weekend getaways and family outings.",
-      image: "/src/assets/suv_ertiga_silver.jpg"
+      image: "/src/assets/car_ertiga.png"
     },
     {
       name: "Kia Carens",
@@ -70,7 +70,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 3,
       desc: "Modern features with comfortable third-row seating.",
       ideal: "Group trips and comfortable outstation journeys.",
-      image: "/src/assets/img15.png"
+      image: "/src/assets/car_carens.png"
     },
     {
       name: "Mahindra Scorpio",
@@ -79,7 +79,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 3,
       desc: "Rugged and capable for exploring diverse terrains.",
       ideal: "Hill station trips and robust travel.",
-      image: "/src/assets/img11.png"
+      image: "/src/assets/car_scorpio.png"
     }
   ];
 
@@ -91,7 +91,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 8,
       desc: "Spacious group travel with push-back seats and AC.",
       ideal: "Corporate outings, extended families, and group tours.",
-      image: "/src/assets/tempo_traveller_white.jpg",
+      image: "/src/assets/car_force12.png",
       note: "Available on request"
     },
     {
@@ -101,7 +101,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 10,
       desc: "Next-generation luxury travel for larger groups.",
       ideal: "Premium group tours and long-distance travel.",
-      image: "/src/assets/img16.png",
+      image: "/src/assets/car_urbania.png",
       note: "Vehicle options subject to availability"
     }
   ];

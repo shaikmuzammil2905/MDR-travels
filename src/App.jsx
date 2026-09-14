@@ -6,7 +6,7 @@ import TrustPage from './components/TrustPage';
 import ContactPage from './components/ContactPage';
 import ContactSection from './components/ContactSection';
 import Services from './components/Services';
-import VehiclesSection from './components/VehiclesSection';
+import VehicleCategories from './components/VehicleCategories';
 import TourPackages from './components/TourPackages';
 import DestinationsSection from './components/DestinationsSection';
 import TravelProcessSection from './components/TravelProcessSection';
@@ -15,6 +15,10 @@ import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
 import AboutSection from './components/AboutSection';
 import { MessageCircle } from 'lucide-react';
+import VehicleCategoryPage from './pages/VehicleCategoryPage';
+import TourDetailPage from './pages/TourDetailPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
+import DestinationDetailPage from './pages/DestinationDetailPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -71,7 +75,7 @@ const Home = () => (
     </div>
     <AboutSection isHomePage={true} />
     <TrustPage isHomePage={true} />
-    <VehiclesSection isHomePage={true} />
+    <VehicleCategories isHomePage={true} />
     <TourPackages isHomePage={true} />
     <DestinationsSection />
     <TravelProcessSection />
@@ -87,7 +91,7 @@ const ServicesPage = () => (
 
 const VehiclesPage = () => (
   <Layout>
-    <VehiclesSection />
+    <VehicleCategories />
   </Layout>
 );
 
@@ -122,8 +126,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:serviceId" element={<Layout><ServiceDetailPage /></Layout>} />
+        
         <Route path="/vehicles" element={<VehiclesPage />} />
+        <Route path="/vehicles/:categoryId" element={<Layout><VehicleCategoryPage /></Layout>} />
+        
         <Route path="/packages" element={<PackagesPage />} />
+        <Route path="/packages/:tourId" element={<Layout><TourDetailPage /></Layout>} />
+        
+        <Route path="/destinations/:destId" element={<Layout><DestinationDetailPage /></Layout>} />
+
         <Route path="/about" element={<AboutPage />} />
         <Route path="/trust" element={<Trust />} />
         <Route path="/contact" element={<Contact />} />
