@@ -8,7 +8,7 @@ import FAQSection from '../components/FAQSection';
 const tourData = {
   'vizag-one-day': {
     title: 'Vizag One Day Tour Package',
-    image: '/images/pkg_vizag.png',
+    image: '/images/hero_vizag_local.png',
     intro: "Explore Visakhapatnam's popular attractions in a comfortable single day tour.",
     duration: '1 Day',
     bestFor: 'Families, Couples, and First-time Visitors',
@@ -26,7 +26,7 @@ const tourData = {
   },
   'vizag-two-days': {
     title: 'Vizag 2 Days Tour Package',
-    image: '/images/pkg_vizag.png',
+    image: '/images/hero_vizag_local.png',
     intro: "A comprehensive two-day exploration of Visakhapatnam's beaches, museums, and temples.",
     duration: '2 Days',
     bestFor: 'Leisure Travelers and Families',
@@ -43,7 +43,7 @@ const tourData = {
   },
   'araku-one-day': {
     title: 'Araku Valley One Day Tour Package',
-    image: '/images/pkg_araku.png',
+    image: '/images/pkg_araku_new.png',
     intro: "A scenic journey through the Eastern Ghats featuring mountain landscapes and viewpoints in a single day.",
     duration: '1 Day',
     bestFor: 'Nature Lovers',
@@ -60,7 +60,7 @@ const tourData = {
   },
   'araku-two-days': {
     title: 'Araku Valley 2 Days Tour Package',
-    image: '/images/pkg_araku.png',
+    image: '/images/pkg_araku_new.png',
     intro: "An extended stay in Araku Valley to fully experience its natural beauty, waterfalls, and culture.",
     duration: '2 Days',
     bestFor: 'Weekend Getaways',
@@ -78,7 +78,7 @@ const tourData = {
   },
   'araku-lambasingi': {
     title: 'Araku & Lambasingi Tour Package',
-    image: '/images/pkg_araku.png',
+    image: '/images/pkg_lambasingi.png',
     intro: "Experience the cool mist of Lambasingi combined with the lush beauty of Araku Valley.",
     duration: 'Custom duration',
     bestFor: 'Nature Enthusiasts and Couples',
@@ -96,7 +96,7 @@ const tourData = {
   },
   'vizag-local-temples': {
     title: 'Vizag Local Temple Tour',
-    image: '/images/temple_bg.png',
+    image: '/images/temple_vizag.png',
     intro: "A spiritual tour covering the most prominent temples in Visakhapatnam.",
     duration: '1 Day',
     bestFor: 'Devotees and Pilgrims',
@@ -115,7 +115,7 @@ const tourData = {
   },
   'arasavilli-sri-kurmam-srimukhalingam': {
     title: 'Arasavilli – Sri Kurmam – Srimukhalingam Temple Tour',
-    image: '/images/temple_bg.png',
+    image: '/images/temple_arasavilli.png',
     intro: "Visit the historic Sun God temple and other ancient temples in the Srikakulam region.",
     duration: 'Custom duration',
     bestFor: 'Heritage and Spiritual Travelers',
@@ -134,7 +134,7 @@ const tourData = {
   },
   'anakapalli-annavaram-pitapuram-samarlakota': {
     title: 'Anakapalli – Annavaram – Pitapuram – Samarlakota Temple Tour',
-    image: '/images/temple_bg.png',
+    image: '/images/pkg_anakapalle.png',
     intro: "A comprehensive pilgrimage covering key temples across the coastal region.",
     duration: 'Custom duration',
     bestFor: 'Pilgrimage',
@@ -153,7 +153,7 @@ const tourData = {
   },
   'vadapalli-temple': {
     title: 'Vadapalli Venkateswara Swamy Temple Tour',
-    image: '/images/temple_bg.png',
+    image: '/images/temple_vadapalli.png',
     intro: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
     duration: '1 Day',
     bestFor: 'Devotees',
@@ -171,7 +171,7 @@ const tourData = {
   },
   'pancharama-temples': {
     title: 'Pancharama Temples Tour Package',
-    image: '/images/temple_bg.png',
+    image: '/images/pkg_pancharamalu.png',
     intro: "A sacred journey visiting the five ancient Hindu temples dedicated to Lord Shiva in Andhra Pradesh.",
     duration: 'Custom duration',
     bestFor: 'Spiritual Travelers',
