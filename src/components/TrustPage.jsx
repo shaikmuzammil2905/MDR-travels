@@ -51,9 +51,9 @@ const TrustPage = ({ isHomePage }) => {
       )}
 
       {/* Trust Cards Grid */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: isHomePage ? '1rem' : '3.5rem' }}>
         <div className="container">
-          <div className="services-grid">
+          <div className="services-grid" style={{ marginTop: isHomePage ? '0' : '3rem' }}>
             {trustCards.map((card, idx) => (
               <div key={idx} className="service-card" style={{ transitionDelay: `${idx * 100}ms` }}>
                 <div className="service-icon-wrapper" style={{ marginBottom: '1.25rem' }}>

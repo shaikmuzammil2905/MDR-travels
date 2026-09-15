@@ -101,7 +101,7 @@ const AboutSection = ({ isHomePage }) => {
       </section>
 
       {/* Core Values Section */}
-      <section className="section" style={{ background: 'var(--light-bg)' }}>
+      <section className="section" style={{ background: 'var(--light-bg)', paddingBottom: isHomePage ? '1rem' : '3.5rem' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '3rem' }}>
             <h2 className="section-title">Why Travel With MDR?</h2>
@@ -110,7 +110,7 @@ const AboutSection = ({ isHomePage }) => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
             {/* Pictorial Representation */}
             <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', height: '100%', minHeight: '400px', position: 'relative' }}>
               <img src={vizagImg} alt="MDR Travel Experience" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
