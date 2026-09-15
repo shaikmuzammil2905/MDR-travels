@@ -83,11 +83,29 @@ const ServiceDetailPage = () => {
           <div className="detail-page-layout">
             
             {/* Left Content */}
-            <div className="detail-content">
-              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '1.8rem' }}>What's Included?</h2>
+            <div className="detail-content" data-aos="fade-up">
+              
+              {/* Huge Related Content and Pictorial Representation */}
+              <div style={{ marginBottom: '2.5rem' }}>
+                <img 
+                  src="/images/vizag-tour.jpg" 
+                  alt={data.title} 
+                  style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: '16px', marginBottom: '1.5rem', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }} 
+                  data-aos="zoom-in"
+                />
+                <h2 style={{ fontSize: '2rem', color: 'var(--dark-blue)', marginBottom: '1rem' }}>Experience the Best {data.title}</h2>
+                <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '1rem' }}>
+                  At MDR Travels, we understand that every journey is unique. Our <strong>{data.title}</strong> service is meticulously designed to provide you with the utmost comfort, safety, and convenience. Whether you are traveling for business, leisure, or a special occasion, our modern fleet and professional chauffeurs ensure a seamless experience from start to finish.
+                </p>
+                <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                  We pride ourselves on our transparency, punctuality, and customer-centric approach. With 24/7 support and well-maintained vehicles, your satisfaction is our top priority. Let us take the wheel while you sit back, relax, and enjoy the ride.
+                </p>
+              </div>
+
+              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '1.8rem' }} data-aos="fade-right">What's Included?</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {data.features.map((feature, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                  <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }} data-aos="fade-up" data-aos-delay={idx * 100}>
                     <CheckCircle2 size={22} className="text-primary-blue" style={{ flexShrink: 0 }} />
                     <span style={{ fontSize: '1.05rem', color: '#475569' }}>{feature}</span>
                   </div>
@@ -95,7 +113,7 @@ const ServiceDetailPage = () => {
               </div>
             </div>
 
-            <div style={{ background: '#fff', padding: '2rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+            <div style={{ background: '#fff', padding: '2rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', textAlign: 'center', border: '1px solid #e2e8f0', height: 'fit-content', position: 'sticky', top: '100px' }} data-aos="fade-left">
               <div style={{ width: '60px', height: '60px', background: '#e0e7ff', color: 'var(--primary-blue)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
                 <PhoneCall size={28} />
               </div>

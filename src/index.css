@@ -841,13 +841,15 @@ ul {
 
 @media (max-width: 768px) {
   .whatsapp-float, .call-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
+    width: 52px;
+    height: 52px;
+    right: 18px;
+  }
+  .whatsapp-float {
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   }
   .call-float {
-    bottom: 80px;
+    bottom: calc(85px + env(safe-area-inset-bottom, 0px));
   }
 }
 

@@ -96,7 +96,7 @@ const tourData = {
   },
   'vizag-local-temples': {
     title: 'Vizag Local Temple Tour',
-    image: '/images/pkg_multi.png',
+    image: '/images/temple_bg.png',
     intro: "A spiritual tour covering the most prominent temples in Visakhapatnam.",
     duration: '1 Day',
     bestFor: 'Devotees and Pilgrims',
@@ -115,7 +115,7 @@ const tourData = {
   },
   'arasavilli-sri-kurmam-srimukhalingam': {
     title: 'Arasavilli – Sri Kurmam – Srimukhalingam Temple Tour',
-    image: '/images/pkg_multi.png',
+    image: '/images/temple_bg.png',
     intro: "Visit the historic Sun God temple and other ancient temples in the Srikakulam region.",
     duration: 'Custom duration',
     bestFor: 'Heritage and Spiritual Travelers',
@@ -134,7 +134,7 @@ const tourData = {
   },
   'anakapalli-annavaram-pitapuram-samarlakota': {
     title: 'Anakapalli – Annavaram – Pitapuram – Samarlakota Temple Tour',
-    image: '/images/pkg_multi.png',
+    image: '/images/temple_bg.png',
     intro: "A comprehensive pilgrimage covering key temples across the coastal region.",
     duration: 'Custom duration',
     bestFor: 'Pilgrimage',
@@ -153,7 +153,7 @@ const tourData = {
   },
   'vadapalli-temple': {
     title: 'Vadapalli Venkateswara Swamy Temple Tour',
-    image: '/images/pkg_multi.png',
+    image: '/images/temple_bg.png',
     intro: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
     duration: '1 Day',
     bestFor: 'Devotees',
@@ -171,7 +171,7 @@ const tourData = {
   },
   'pancharama-temples': {
     title: 'Pancharama Temples Tour Package',
-    image: '/images/pkg_multi.png',
+    image: '/images/temple_bg.png',
     intro: "A sacred journey visiting the five ancient Hindu temples dedicated to Lord Shiva in Andhra Pradesh.",
     duration: 'Custom duration',
     bestFor: 'Spiritual Travelers',
