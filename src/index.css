@@ -718,11 +718,11 @@ ul {
     height: 100%;
   }
   .mobile-bg-sky {
-    background-size: cover !important;
-    background-position: top center !important;
+    background-size: 350% auto !important;
+    background-position: top left !important;
     background-repeat: no-repeat !important;
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 75%);
-    mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 75%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 70%);
+    mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 70%);
     z-index: 1;
   }
   .mobile-bg-cars {
