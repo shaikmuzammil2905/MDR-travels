@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import heroBgDesktop from '../assets/hero-official.png';
-import heroBgMobile from '../assets/hero-mobile.png';
+import heroBgMobile from '../assets/hero-mobile-new.jpg';
 
 const Hero = () => {
   return (
@@ -12,10 +12,10 @@ const Hero = () => {
         <img src={heroBgDesktop} alt="MDR Travels Coastal Journey" style={{ objectFit: 'cover', objectPosition: 'center' }} />
       </div>
 
-      <div className="hero-bg mobile-bg">
-        <div className="mobile-bg-sky" style={{ backgroundImage: `url(${heroBgMobile})` }}></div>
-        <div className="mobile-bg-cars" style={{ backgroundImage: `url(${heroBgMobile})` }}></div>
-      </div>
+      <div 
+        className="hero-bg mobile-bg"
+        style={{ backgroundImage: `url(${heroBgMobile})` }}
+      ></div>
 
       <div className="hero-overlay"></div>
       
