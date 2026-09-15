@@ -62,7 +62,8 @@ const Navbar = () => {
   const vehiclesList = [
     { title: "4-Seater Cars", path: "/vehicles/4-seater-cars" },
     { title: "6-7 Seater SUVs", path: "/vehicles/suvs" },
-    { title: "Tempo Travellers", path: "/vehicles/tempo-travellers" }
+    { title: "Tempo Travellers", path: "/vehicles/tempo-travellers" },
+    { title: "Luxury Buses", path: "/vehicles/buses" }
   ];
 
   const packagesList = [

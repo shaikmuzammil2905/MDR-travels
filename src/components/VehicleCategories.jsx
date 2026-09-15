@@ -27,8 +27,16 @@ const VehicleCategories = ({ isHomePage }) => {
       title: "Tempo Travellers",
       image: "/images/car_force12.png",
       desc: "Premium group travellers for large families, corporate outings, and extended tours.",
-      seats: "12-17",
-      bags: "8-10"
+      seats: "12-19",
+      bags: "8-14"
+    },
+    {
+      id: 'buses',
+      title: "Luxury Buses",
+      image: "/images/hero-bright.png",
+      desc: "Deluxe air-conditioned buses suited for large events, weddings, and pilgrimages.",
+      seats: "32+",
+      bags: "25+"
     }
   ];
 
