@@ -153,7 +153,7 @@ const tourData = {
   },
   'vadapalli-temple': {
     title: 'Vadapalli Venkateswara Swamy Temple Tour',
-    image: '/images/temple_vadapalli.png',
+    image: '/images/img_113.png',
     intro: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
     duration: '1 Day',
     bestFor: 'Devotees',

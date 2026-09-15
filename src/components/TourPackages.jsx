@@ -91,7 +91,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vadapalli-temple",
       title: "Vadapalli Venkateswara Swamy Temple Tour",
-      image: "/images/temple_vadapalli.png",
+      image: "/images/img_113.png",
       desc: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
       duration: "1 Day",
       bestFor: "Devotees",
