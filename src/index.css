@@ -708,33 +708,34 @@ ul {
     width: 100%;
     height: 100%;
     z-index: -2;
+    background: linear-gradient(180deg, #25a8f6 0%, #87ceeb 100%);
   }
   .mobile-bg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center bottom !important;
+    object-fit: contain;
+    object-position: bottom center !important;
   }
   .hero {
-    min-height: clamp(370px, 95vw, 430px) !important;
+    min-height: clamp(420px, 115vw, 480px) !important;
     height: auto !important;
-    padding-top: 75px !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 85px !important;
+    padding-bottom: 1rem !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     position: relative !important;
     overflow: hidden !important;
   }
-  /* Subtle, clean gradient on the left side: leaves cloudy sky, ocean, road, and bus bright! */
+  /* Dark overlay at top for text readability, clear at bottom for vehicles */
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(0, 25, 65, 0.42) 0%, rgba(0, 25, 65, 0.18) 45%, rgba(0, 0, 0, 0) 70%) !important;
+    background: linear-gradient(180deg, rgba(0, 15, 40, 0.75) 0%, rgba(0, 15, 40, 0.35) 45%, rgba(0, 0, 0, 0) 85%) !important;
   }
   .hero-layout {
     padding: 0 1.25rem !important;
     width: 100% !important;
     display: flex !important;
-    align-items: center !important;
-    margin-top: 20px !important;
+    align-items: flex-start !important;
+    margin-top: 10px !important;
   }
   .hero-content {
     max-width: 100% !important;
