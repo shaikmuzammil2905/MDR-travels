@@ -11,7 +11,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-one-day",
       title: "Vizag One Day Tour Package",
-      image: "/images/vizag_pkg_new.png",
+      image: "/images/vizag_pkg_111.png",
       desc: "Explore Visakhapatnam's popular attractions in a comfortable single day tour.",
       duration: "1 Day",
       bestFor: "Families, Couples, and First-time Visitors",
@@ -21,7 +21,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-two-days",
       title: "Vizag 2 Days Tour Package",
-      image: "/images/vizag_pkg_new.png",
+      image: "/images/vizag_pkg_111.png",
       desc: "A comprehensive two-day exploration of Visakhapatnam's beaches, museums, and temples.",
       duration: "2 Days",
       bestFor: "Leisure Travelers and Families",

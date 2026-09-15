@@ -8,7 +8,7 @@ const DestinationsSection = () => {
     {
       name: "Visakhapatnam",
       desc: "The City of Destiny, famous for its beaches and scenic coastal roads.",
-      image: "/images/tour_vizag_beach_new.png"
+      image: "/images/tour_vizag_beach.jpg"
     },
     {
       name: "Araku Valley",
@@ -23,12 +23,12 @@ const DestinationsSection = () => {
     {
       name: "Srikakulam",
       desc: "A spiritual destination featuring the historic Arasavilli Sun God Temple.",
-      image: "/images/temple_thumbnail_new.png"
+      image: "/images/img_113.png"
     },
     {
       name: "Rajahmundry",
       desc: "The cultural capital of Andhra Pradesh, famous for its Godavari river views.",
-      image: "/images/temple_thumbnail_new.png"
+      image: "/images/img_113.png"
     }
   ];
 

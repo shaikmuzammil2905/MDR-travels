@@ -33,7 +33,7 @@ const VehicleCategories = ({ isHomePage }) => {
     {
       id: 'buses',
       title: "Luxury Buses",
-      image: "/images/bus_thumbnail_new.png",
+      image: "/images/bus_thumbnail_87.png",
       desc: "Deluxe air-conditioned buses suited for large events, weddings, and pilgrimages.",
       seats: "32+",
       bags: "25+"
