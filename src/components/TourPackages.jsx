@@ -11,7 +11,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-one-day",
       title: "Vizag One Day Tour Package",
-      image: "/images/pkg_vizag.png",
+      image: "/images/pkg_vizag_local.png",
       desc: "Explore Visakhapatnam's popular attractions in a comfortable single day tour.",
       duration: "1 Day",
       bestFor: "Families, Couples, and First-time Visitors",
@@ -21,7 +21,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-two-days",
       title: "Vizag 2 Days Tour Package",
-      image: "/images/pkg_vizag.png",
+      image: "/images/pkg_vizag_local.png",
       desc: "A comprehensive two-day exploration of Visakhapatnam's beaches, museums, and temples.",
       duration: "2 Days",
       bestFor: "Leisure Travelers and Families",
@@ -31,7 +31,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "araku-one-day",
       title: "Araku Valley One Day Tour Package",
-      image: "/images/pkg_araku.png",
+      image: "/images/pkg_araku_new.png",
       desc: "A scenic journey through the Eastern Ghats featuring mountain landscapes and viewpoints in a single day.",
       duration: "1 Day",
       bestFor: "Nature Lovers",
@@ -41,7 +41,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "araku-two-days",
       title: "Araku Valley 2 Days Tour Package",
-      image: "/images/pkg_araku.png",
+      image: "/images/pkg_araku_new.png",
       desc: "An extended stay in Araku Valley to fully experience its natural beauty, waterfalls, and culture.",
       duration: "2 Days",
       bestFor: "Weekend Getaways",
@@ -51,7 +51,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "araku-lambasingi",
       title: "Araku & Lambasingi Tour Package",
-      image: "/images/pkg_araku.png",
+      image: "/images/pkg_lambasingi.png",
       desc: "Experience the cool mist of Lambasingi combined with the lush beauty of Araku Valley.",
       duration: "Custom duration",
       bestFor: "Nature Enthusiasts and Couples",
@@ -61,7 +61,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-local-temples",
       title: "Vizag Local Temple Tour",
-      image: "/images/pkg_multi.png",
+      image: "/images/temple_vizag.png",
       desc: "A spiritual tour covering the most prominent temples in Visakhapatnam.",
       duration: "1 Day",
       bestFor: "Devotees and Pilgrims",
@@ -71,7 +71,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "arasavilli-sri-kurmam-srimukhalingam",
       title: "Arasavilli – Sri Kurmam – Srimukhalingam Temple Tour",
-      image: "/images/pkg_multi.png",
+      image: "/images/temple_arasavilli.png",
       desc: "Visit the historic Sun God temple and other ancient temples in the Srikakulam region.",
       duration: "Custom duration",
       bestFor: "Heritage and Spiritual Travelers",
@@ -81,7 +81,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "anakapalli-annavaram-pitapuram-samarlakota",
       title: "Anakapalli – Annavaram – Pitapuram – Samarlakota Temple Tour",
-      image: "/images/pkg_multi.png",
+      image: "/images/pkg_anakapalle.png",
       desc: "A comprehensive pilgrimage covering key temples across the coastal region.",
       duration: "Custom duration",
       bestFor: "Pilgrimage",
@@ -91,7 +91,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vadapalli-temple",
       title: "Vadapalli Venkateswara Swamy Temple Tour",
-      image: "/images/pkg_multi.png",
+      image: "/images/temple_vadapalli.png",
       desc: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
       duration: "1 Day",
       bestFor: "Devotees",
@@ -101,7 +101,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "pancharama-temples",
       title: "Pancharama Temples Tour Package",
-      image: "/images/pkg_multi.png",
+      image: "/images/pkg_pancharamalu.png",
       desc: "A sacred journey visiting the five ancient Hindu temples dedicated to Lord Shiva in Andhra Pradesh.",
       duration: "Custom duration",
       bestFor: "Spiritual Travelers",
@@ -129,9 +129,9 @@ const TourPackages = ({ isHomePage }) => {
         <div className="container">
           <div className="packages-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2.5rem' }}>
             {packages.map((pkg, idx) => (
-              <div key={idx} className="package-card" style={{ transitionDelay: `${idx * 100}ms`, background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column' }}>
-                <div className="package-img" style={{ height: '240px', position: 'relative' }}>
-                  <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div key={idx} className="package-card grand-card" style={{ transitionDelay: `${idx * 100}ms`, background: '#fff', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 40px rgba(0,0,0,0.15)', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+                <div className="package-img" style={{ height: '260px', position: 'relative' }}>
+                  <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="grand-img" />
                   <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', padding: '2rem 1.5rem 1rem' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: 0 }}>{pkg.title}</h3>
                   </div>

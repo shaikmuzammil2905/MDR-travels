@@ -112,14 +112,14 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 25,
       desc: "Deluxe air-conditioned buses suited for any journey.",
       ideal: "Wedding guests, large corporate events, and pilgrimages.",
-      image: "/images/car_bus32.png"
+      image: "/images/bus_32_new.png"
     }
   ];
 
   const renderVehicleCard = (vehicle, idx) => (
-    <div key={idx} className="fleet-card" style={{ transitionDelay: `${idx * 50}ms` }}>
-      <div className="fleet-img" style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#f8fafc' }}>
-        <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }} />
+    <div key={idx} className="fleet-card grand-card" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 40px rgba(0,0,0,0.15)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', backgroundColor: '#fff', display: 'flex', flexDirection: 'column' }}>
+      <div className="fleet-img" style={{ height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' }}>
+        <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem', transition: 'transform 0.5s ease' }} className="grand-img" />
         <div className="fleet-badge">{vehicle.type}</div>
       </div>
       <div className="fleet-content" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
