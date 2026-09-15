@@ -708,17 +708,10 @@ ul {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: linear-gradient(180deg, #25a8f6 0%, #87ceeb 100%);
-  }
-  .mobile-hero-img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    object-fit: contain;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
+    background-color: #25a8f6 !important;
+    background-size: contain !important;
+    background-position: bottom center !important;
+    background-repeat: no-repeat !important;
   }
   .hero {
     min-height: clamp(370px, 105vw, 420px) !important;

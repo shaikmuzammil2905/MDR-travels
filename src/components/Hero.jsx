@@ -12,9 +12,10 @@ const Hero = () => {
         <img src={heroBgDesktop} alt="MDR Travels Coastal Journey" style={{ objectFit: 'cover', objectPosition: 'center' }} />
       </div>
 
-      <div className="hero-bg mobile-bg">
-        <img src={heroBgMobile} alt="MDR Travels Coastal Journey" className="mobile-hero-img" />
-      </div>
+      <div 
+        className="hero-bg mobile-bg"
+        style={{ backgroundImage: `url(${heroBgMobile})` }}
+      ></div>
 
       <div className="hero-overlay"></div>
       
