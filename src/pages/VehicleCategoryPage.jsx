@@ -11,10 +11,10 @@ const vehicleData = {
     intro: 'Ideal for city travel, airport transfers, couples, and small families. Enjoy a smooth, private ride in our well-maintained sedans and hatchbacks.',
     advantages: ['Perfect for up to 4 passengers', 'Great fuel efficiency for local trips', 'Easy to navigate in city traffic', 'Comfortable AC interiors'],
     vehicles: [
-      { name: "Swift Dzire", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Comfortable and efficient, perfect for city travel and airport transfers.", ideal: "Airport transfers, couples, small families.", image: "/images/car_dzire.png" },
-      { name: "Honda Amaze", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Smooth ride with premium interiors for a relaxing journey.", ideal: "Business travel and comfortable city errands.", image: "/images/car_aura.png" },
-      { name: "Maruthi Fronx", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Safe and sturdy compact sedan for safe local travel.", ideal: "Local sightseeing and short trips.", image: "/images/car_tigor.png" },
-      { name: "Toyota Etios", type: "4-Seater Sedan", seats: 4, bags: 1, desc: "Compact and agile, great for navigating busy city streets.", ideal: "Quick city commutes and solo travelers.", image: "/images/car_i10.png" }
+      { name: "Swift Dzire", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Comfortable and efficient, perfect for city travel and airport transfers.", ideal: "Airport transfers, couples, small families.", image: "/images/car_dzire_new.png" },
+      { name: "Honda Amaze", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Smooth ride with premium interiors for a relaxing journey.", ideal: "Business travel and comfortable city errands.", image: "/images/car_amaze.png" },
+      { name: "Maruthi Fronx", type: "4-Seater Sedan", seats: 4, bags: 2, desc: "Safe and sturdy compact sedan for safe local travel.", ideal: "Local sightseeing and short trips.", image: "/images/car_fronx.png" },
+      { name: "Toyota Etios", type: "4-Seater Sedan", seats: 4, bags: 1, desc: "Compact and agile, great for navigating busy city streets.", ideal: "Quick city commutes and solo travelers.", image: "/images/car_etios.png" }
     ],
     related: [
       { title: '6-7 Seater SUVs', path: '/vehicles/suvs' },
@@ -42,8 +42,8 @@ const vehicleData = {
     advantages: ['Spacious push-back seating', 'Ample luggage space for long trips', 'High roof for easy movement', 'Dedicated A/C vents for all rows'],
     vehicles: [
       { name: "12 Seater Tempo Traveller", type: "Group Traveller", seats: 12, bags: 8, desc: "Spacious group travel with push-back seats and AC.", ideal: "Corporate outings, extended families.", image: "/images/car_force12.png" },
-      { name: "17 Seater Tempo Traveller", type: "Large Group Traveller", seats: 17, bags: 12, desc: "Comfortable travel for large groups.", ideal: "Group tours and long-distance travel.", image: "/images/car_urbania.png" },
-      { name: "19 Seater Tempo Traveller", type: "Extra Large Group Traveller", seats: 19, bags: 14, desc: "Maximum capacity for very large groups.", ideal: "School trips, large family events.", image: "/images/car_urbania.png" },
+      { name: "17 Seater Tempo Traveller", type: "Large Group Traveller", seats: 17, bags: 12, desc: "Comfortable travel for large groups.", ideal: "Group tours and long-distance travel.", image: "/images/car_17seater.png" },
+      { name: "19 Seater Tempo Traveller", type: "Extra Large Group Traveller", seats: 19, bags: 14, desc: "Maximum capacity for very large groups.", ideal: "School trips, large family events.", image: "/images/car_19seater.png" },
       { name: "Urbania", type: "Premium Group Traveller", seats: 17, bags: 10, desc: "Next-generation luxury travel for larger groups.", ideal: "Premium group tours and long-distance travel.", image: "/images/car_urbania.png" }
     ],
     related: [
@@ -57,7 +57,7 @@ const vehicleData = {
     intro: 'Premium air-conditioned buses for large events, weddings, and pilgrimages.',
     advantages: ['Maximum seating capacity', 'Entertainment systems', 'Perfect for weddings and events', 'Experienced long-route drivers'],
     vehicles: [
-      { name: "32 Seater Bus", type: "Luxury Coach", seats: 32, bags: 25, desc: "Deluxe air-conditioned buses suited for any journey.", ideal: "Wedding guests, large corporate events, and pilgrimages.", image: "/images/hero-bright.png" }
+      { name: "32 Seater Bus", type: "Luxury Coach", seats: 32, bags: 25, desc: "Deluxe air-conditioned buses suited for any journey.", ideal: "Wedding guests, large corporate events, and pilgrimages.", image: "/images/car_bus32.png" }
     ],
     related: [
       { title: 'Tempo Travellers', path: '/vehicles/tempo-travellers' },

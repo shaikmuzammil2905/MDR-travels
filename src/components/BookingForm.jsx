@@ -92,10 +92,16 @@ const BookingForm = ({ className }) => {
               </label>
               <select name="package" className="form-control" defaultValue="None">
                 <option value="None">Select a Package (Optional)</option>
-                <option value="Vizag City Tour">Vizag City Tour</option>
-                <option value="Araku Valley">Araku Valley</option>
-                <option value="Tirupati Pilgrimage">Tirupati Pilgrimage</option>
-                <option value="Multi-City Tour">Multi-City Tour</option>
+                <option value="Vizag One Day Tour">Vizag One Day Tour</option>
+                <option value="Vizag 2 Days Tour">Vizag 2 Days Tour</option>
+                <option value="Araku One Day Tour">Araku One Day Tour</option>
+                <option value="Araku 2 Days Tour">Araku 2 Days Tour</option>
+                <option value="Araku & Lambasingi Tour">Araku & Lambasingi Tour</option>
+                <option value="Vizag Local Temple Tour">Vizag Local Temple Tour</option>
+                <option value="Arasavilli – Sri Kurmam – Srimukhalingam">Arasavilli – Sri Kurmam – Srimukhalingam</option>
+                <option value="Anakapalli – Annavaram – Pitapuram – Samarlakota">Anakapalli – Annavaram – Pitapuram – Samarlakota</option>
+                <option value="Vadapalli Venkateswara Swamy Tour">Vadapalli Venkateswara Swamy Tour</option>
+                <option value="Pancharama Temples Tour">Pancharama Temples Tour</option>
               </select>
             </div>
 

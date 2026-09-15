@@ -13,7 +13,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Comfortable and efficient, perfect for city travel and airport transfers.",
       ideal: "Airport transfers, couples, small families and city travel.",
-      image: "/src/assets/car_dzire.png"
+      image: "/images/car_dzire_new.png"
     },
     {
       name: "Honda Amaze",
@@ -22,7 +22,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Smooth ride with premium interiors for a relaxing journey.",
       ideal: "Business travel and comfortable city errands.",
-      image: "/src/assets/car_aura.png"
+      image: "/images/car_amaze.png"
     },
     {
       name: "Maruthi Fronx",
@@ -31,7 +31,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Safe and sturdy compact sedan for safe local travel.",
       ideal: "Local sightseeing and short trips.",
-      image: "/src/assets/car_tigor.png"
+      image: "/images/car_fronx.png"
     },
     {
       name: "Toyota Etios",
@@ -40,7 +40,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 2,
       desc: "Compact and agile, great for navigating busy city streets.",
       ideal: "Quick city commutes and solo travelers.",
-      image: "/src/assets/car_i10.png"
+      image: "/images/car_etios.png"
     }
   ];
 
@@ -82,7 +82,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 12,
       desc: "Comfortable travel for large groups.",
       ideal: "Group tours and long-distance travel.",
-      image: "/src/assets/car_urbania.png"
+      image: "/images/car_17seater.png"
     },
     {
       name: "19 Seater Tempo Traveller",
@@ -91,7 +91,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 14,
       desc: "Maximum capacity for very large groups.",
       ideal: "School trips, large family events.",
-      image: "/src/assets/car_urbania.png"
+      image: "/images/car_19seater.png"
     },
     {
       name: "Urbania",
@@ -112,7 +112,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 25,
       desc: "Deluxe air-conditioned buses suited for any journey.",
       ideal: "Wedding guests, large corporate events, and pilgrimages.",
-      image: "/src/assets/hero-bright.png"
+      image: "/images/car_bus32.png"
     }
   ];
 
