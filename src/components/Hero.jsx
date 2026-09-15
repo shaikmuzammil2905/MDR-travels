@@ -13,7 +13,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-bg mobile-bg">
-        <img src={heroBgMobile} alt="MDR Travels Coastal Journey" style={{ objectFit: 'cover', objectPosition: '70% center' }} />
+        <img src={heroBgMobile} alt="MDR Travels Coastal Journey" className="mobile-hero-img" />
       </div>
 
       <div className="hero-overlay"></div>

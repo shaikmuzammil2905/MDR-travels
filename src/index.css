@@ -710,14 +710,18 @@ ul {
     z-index: -2;
     background: linear-gradient(180deg, #25a8f6 0%, #87ceeb 100%);
   }
-  .mobile-bg img {
+  .mobile-hero-img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     object-fit: contain;
-    object-position: bottom center !important;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
   }
   .hero {
-    min-height: clamp(420px, 115vw, 480px) !important;
+    min-height: clamp(370px, 105vw, 420px) !important;
     height: auto !important;
     padding-top: 85px !important;
     padding-bottom: 1rem !important;
