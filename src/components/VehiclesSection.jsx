@@ -118,8 +118,8 @@ const VehiclesSection = ({ isHomePage }) => {
 
   const renderVehicleCard = (vehicle, idx) => (
     <div key={idx} className="fleet-card" style={{ transitionDelay: `${idx * 50}ms` }}>
-      <div className="fleet-img" style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-        <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      <div className="fleet-img" style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#f8fafc' }}>
+        <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }} />
         <div className="fleet-badge">{vehicle.type}</div>
       </div>
       <div className="fleet-content" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>

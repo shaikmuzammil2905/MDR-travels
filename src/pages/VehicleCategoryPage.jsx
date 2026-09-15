@@ -114,9 +114,9 @@ const VehicleCategoryPage = () => {
           <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
             {data.vehicles.map((vehicle, idx) => (
               <div key={idx} className="fleet-card" style={{ display: 'flex', flexDirection: 'column' }}>
-                <div className="fleet-img" style={{ height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                  <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div className="fleet-badge">{vehicle.type}</div>
+                  <div className="fleet-img" style={{ height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#f8fafc' }}>
+                    <img src={vehicle.image} alt={vehicle.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }} />
+                    <div className="fleet-badge">{vehicle.type}</div>
                 </div>
                 <div className="fleet-content" style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                   <h3 className="fleet-title" style={{ fontSize: '1.35rem', color: 'var(--dark-blue)', marginBottom: '0.75rem' }}>{vehicle.name}</h3>
