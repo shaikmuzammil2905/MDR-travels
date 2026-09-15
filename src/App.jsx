@@ -16,7 +16,7 @@ import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
 import AboutSection from './components/AboutSection';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 import VehicleCategoryPage from './pages/VehicleCategoryPage';
 import TourDetailPage from './pages/TourDetailPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
@@ -50,6 +50,14 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
+      {/* Floating Call Button */}
+      <a 
+        href="tel:+918247096395" 
+        className="call-float"
+        aria-label="Call Now"
+      >
+        <Phone size={32} />
+      </a>
       {/* Floating WhatsApp Button */}
       <a 
         href="https://wa.me/918247096395" 

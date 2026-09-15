@@ -55,7 +55,7 @@ const AboutSection = ({ isHomePage }) => {
               Setting New Benchmarks in Comfort & Reliability
             </h2>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#475569', marginBottom: '1.25rem' }}>
-              <strong>MDR Travels</strong> is a newly established premier travel agency based in Kancharapalem, Visakhapatnam. Born out of a passion for hospitality and seamless transportation, our mission is to provide every traveler with a smooth, stress-free, and memorable ride.
+              <strong>MDR Travels</strong> is a premier travel agency with 6 or 7 years of experience based in Kancharapalem, Visakhapatnam. Born out of a passion for hospitality and seamless transportation, our mission is to provide every traveler with a smooth, stress-free, and memorable ride.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#475569', marginBottom: '1.5rem' }}>
               Whether you are planning a local city errand, an urgent airport transfer at midnight, a breathtaking weekend getaway to Araku Valley and Lambasingi, or transporting wedding guests in our deluxe buses, MDR Travels delivers unmatched comfort and professionalism.

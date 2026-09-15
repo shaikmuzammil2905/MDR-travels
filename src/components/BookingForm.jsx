@@ -14,7 +14,8 @@ const BookingForm = ({ className }) => {
       pickup: formData.get('pickup'),
       destination: formData.get('destination'),
       date: formData.get('date'),
-      vehicle: formData.get('vehicle')
+      vehicle: formData.get('vehicle'),
+      package: formData.get('package')
     });
     
     setIsModalOpen(true);
@@ -81,6 +82,20 @@ const BookingForm = ({ className }) => {
                 <option value="SUV (6-7 Seater)">SUV (6-7 Seater)</option>
                 <option value="Tempo Traveller (12-14 Seater)">Tempo Traveller (12-14 Seater)</option>
                 <option value="Luxury Bus / Coach">Luxury Bus / Coach</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label-with-icon">
+                <MapPin size={16} className="field-icon" />
+                <span>Tour Package</span>
+              </label>
+              <select name="package" className="form-control" defaultValue="None">
+                <option value="None">Select a Package (Optional)</option>
+                <option value="Vizag City Tour">Vizag City Tour</option>
+                <option value="Araku Valley">Araku Valley</option>
+                <option value="Tirupati Pilgrimage">Tirupati Pilgrimage</option>
+                <option value="Multi-City Tour">Multi-City Tour</option>
               </select>
             </div>
 

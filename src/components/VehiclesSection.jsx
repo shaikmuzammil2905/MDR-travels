@@ -7,7 +7,7 @@ const VehiclesSection = ({ isHomePage }) => {
 
   const cars = [
     {
-      name: "Maruti Suzuki Dzire",
+      name: "Swift Dzire",
       type: "4-Seater Sedan",
       seats: 4,
       bags: 2,
@@ -16,7 +16,7 @@ const VehiclesSection = ({ isHomePage }) => {
       image: "/src/assets/car_dzire.png"
     },
     {
-      name: "Hyundai Aura",
+      name: "Honda Amaze",
       type: "4-Seater Sedan",
       seats: 4,
       bags: 2,
@@ -25,7 +25,7 @@ const VehiclesSection = ({ isHomePage }) => {
       image: "/src/assets/car_aura.png"
     },
     {
-      name: "Tata Tigor",
+      name: "Maruthi Fronx",
       type: "4-Seater Sedan",
       seats: 4,
       bags: 2,
@@ -34,10 +34,10 @@ const VehiclesSection = ({ isHomePage }) => {
       image: "/src/assets/car_tigor.png"
     },
     {
-      name: "Hyundai Grand i10 Nios",
-      type: "4-Seater Hatchback",
+      name: "Toyota Etios",
+      type: "4-Seater Sedan",
       seats: 4,
-      bags: 1,
+      bags: 2,
       desc: "Compact and agile, great for navigating busy city streets.",
       ideal: "Quick city commutes and solo travelers.",
       image: "/src/assets/car_i10.png"
@@ -46,16 +46,7 @@ const VehiclesSection = ({ isHomePage }) => {
 
   const suvs = [
     {
-      name: "Toyota Innova Crysta",
-      type: "6/7-Seater Premium SUV",
-      seats: 7,
-      bags: 4,
-      desc: "The gold standard for long-distance comfort and reliability.",
-      ideal: "Long-distance trips, family tours and outstation travel.",
-      image: "/src/assets/car_innova.png"
-    },
-    {
-      name: "Maruti Suzuki Ertiga",
+      name: "Maruthi Ertiga",
       type: "6-Seater MUV",
       seats: 6,
       bags: 3,
@@ -64,45 +55,64 @@ const VehiclesSection = ({ isHomePage }) => {
       image: "/src/assets/car_ertiga.png"
     },
     {
-      name: "Kia Carens",
-      type: "6/7-Seater MUV",
+      name: "Innova Crysta",
+      type: "6/7-Seater Premium SUV",
       seats: 7,
-      bags: 3,
-      desc: "Modern features with comfortable third-row seating.",
-      ideal: "Group trips and comfortable outstation journeys.",
-      image: "/src/assets/car_carens.png"
-    },
-    {
-      name: "Mahindra Scorpio",
-      type: "7-Seater SUV",
-      seats: 7,
-      bags: 3,
-      desc: "Rugged and capable for exploring diverse terrains.",
-      ideal: "Hill station trips and robust travel.",
-      image: "/src/assets/car_scorpio.png"
+      bags: 4,
+      desc: "The gold standard for long-distance comfort and reliability.",
+      ideal: "Long-distance trips, family tours and outstation travel.",
+      image: "/src/assets/car_innova.png"
     }
   ];
 
   const tempos = [
     {
-      name: "Force Traveller 12-Seater",
+      name: "12 Seater Tempo Traveller",
       type: "Group Traveller",
       seats: 12,
       bags: 8,
       desc: "Spacious group travel with push-back seats and AC.",
       ideal: "Corporate outings, extended families, and group tours.",
-      image: "/src/assets/car_force12.png",
-      note: "Available on request"
+      image: "/src/assets/car_force12.png"
     },
     {
-      name: "Premium Force Urbania",
-      type: "Luxury Group Traveller",
+      name: "17 Seater Tempo Traveller",
+      type: "Large Group Traveller",
+      seats: 17,
+      bags: 12,
+      desc: "Comfortable travel for large groups.",
+      ideal: "Group tours and long-distance travel.",
+      image: "/src/assets/car_urbania.png"
+    },
+    {
+      name: "19 Seater Tempo Traveller",
+      type: "Extra Large Group Traveller",
+      seats: 19,
+      bags: 14,
+      desc: "Maximum capacity for very large groups.",
+      ideal: "School trips, large family events.",
+      image: "/src/assets/car_urbania.png"
+    },
+    {
+      name: "Urbania",
+      type: "Premium Group Traveller",
       seats: 17,
       bags: 10,
       desc: "Next-generation luxury travel for larger groups.",
       ideal: "Premium group tours and long-distance travel.",
-      image: "/src/assets/car_urbania.png",
-      note: "Vehicle options subject to availability"
+      image: "/src/assets/car_urbania.png"
+    }
+  ];
+
+  const buses = [
+    {
+      name: "32 Seater Bus",
+      type: "Luxury Coach",
+      seats: 32,
+      bags: 25,
+      desc: "Deluxe air-conditioned buses suited for any journey.",
+      ideal: "Wedding guests, large corporate events, and pilgrimages.",
+      image: "/src/assets/hero-bright.png"
     }
   ];
 
@@ -185,6 +195,18 @@ const VehiclesSection = ({ isHomePage }) => {
           </div>
           <div className="services-grid">
             {tempos.map(renderVehicleCard)}
+          </div>
+        </div>
+      </section>
+      {/* Buses */}
+      <section className="section" style={{ background: 'var(--light-bg)' }}>
+        <div className="container">
+          <div data-aos="fade-up" style={{ marginBottom: '2.5rem' }}>
+            <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>Buses for Large Groups</h2>
+            <p style={{ color: '#64748b', fontSize: '1.05rem' }}>Luxury coaches for weddings, events, and pilgrimages.</p>
+          </div>
+          <div className="services-grid">
+            {buses.map(renderVehicleCard)}
           </div>
         </div>
       </section>
