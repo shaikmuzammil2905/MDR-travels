@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import heroBgDesktop from '../assets/hero-official.png';
-import heroBgMobile from '../assets/hero-mobile-new.png';
+import heroBgMobile from '../assets/hero-mobile-new.jpg';
 
 const Hero = () => {
   return (
