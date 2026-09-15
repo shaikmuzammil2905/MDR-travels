@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       duration: 800,
       once: true,
       offset: 50,
-      disable: 'mobile' // Disable advanced animations on mobile to prevent overflow/layout shifts, or use 'phone'
+      disable: false // Enable animations on mobile to fix visibility issues
     });
     
     // Fallback: remove 'reveal' logic, just refresh AOS if children change
