@@ -33,7 +33,7 @@ const VehicleCategories = ({ isHomePage }) => {
     {
       id: 'buses',
       title: "Luxury Buses",
-      image: "/images/hero-bright.png",
+      image: "/images/bus_thumbnail_new.png",
       desc: "Deluxe air-conditioned buses suited for large events, weddings, and pilgrimages.",
       seats: "32+",
       bags: "25+"
@@ -64,9 +64,9 @@ const VehicleCategories = ({ isHomePage }) => {
           
           <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {categories.map((cat, idx) => (
-              <div key={idx} className="fleet-card" style={{ transitionDelay: `${idx * 100}ms`, display: 'flex', flexDirection: 'column' }}>
-                <div className="fleet-img" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={cat.image} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div key={idx} className="fleet-card grand-card" style={{ transitionDelay: `${idx * 100}ms`, display: 'flex', flexDirection: 'column', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 40px rgba(0,0,0,0.15)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', backgroundColor: '#fff' }}>
+                <div className="fleet-img" style={{ height: '220px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={cat.image} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="grand-img" />
                 </div>
                 <div className="fleet-content" style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                   <h3 className="fleet-title" style={{ fontSize: '1.4rem', color: 'var(--dark-blue)', marginBottom: '0.75rem' }}>{cat.title}</h3>

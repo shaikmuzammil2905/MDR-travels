@@ -52,7 +52,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 3,
       desc: "Spacious and economical for medium-sized family trips.",
       ideal: "Weekend getaways and family outings.",
-      image: "/src/assets/car_ertiga.png"
+      image: "/images/car_ertiga.png"
     },
     {
       name: "Innova Crysta",
@@ -61,7 +61,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 4,
       desc: "The gold standard for long-distance comfort and reliability.",
       ideal: "Long-distance trips, family tours and outstation travel.",
-      image: "/src/assets/car_innova.png"
+      image: "/images/car_innova.png"
     }
   ];
 
@@ -73,7 +73,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 8,
       desc: "Spacious group travel with push-back seats and AC.",
       ideal: "Corporate outings, extended families, and group tours.",
-      image: "/src/assets/car_force12.png"
+      image: "/images/car_force12.png"
     },
     {
       name: "17 Seater Tempo Traveller",
@@ -100,7 +100,7 @@ const VehiclesSection = ({ isHomePage }) => {
       bags: 10,
       desc: "Next-generation luxury travel for larger groups.",
       ideal: "Premium group tours and long-distance travel.",
-      image: "/src/assets/car_urbania.png"
+      image: "/images/car_urbania.png"
     }
   ];
 

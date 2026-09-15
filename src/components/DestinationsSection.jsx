@@ -8,7 +8,7 @@ const DestinationsSection = () => {
     {
       name: "Visakhapatnam",
       desc: "The City of Destiny, famous for its beaches and scenic coastal roads.",
-      image: "/images/tour_vizag_beach.jpg"
+      image: "/images/tour_vizag_beach_new.png"
     },
     {
       name: "Araku Valley",
@@ -23,12 +23,12 @@ const DestinationsSection = () => {
     {
       name: "Srikakulam",
       desc: "A spiritual destination featuring the historic Arasavilli Sun God Temple.",
-      image: "/images/pkg_multi.png"
+      image: "/images/temple_thumbnail_new.png"
     },
     {
       name: "Rajahmundry",
       desc: "The cultural capital of Andhra Pradesh, famous for its Godavari river views.",
-      image: "/images/pkg_multi.png"
+      image: "/images/temple_thumbnail_new.png"
     }
   ];
 
@@ -44,9 +44,9 @@ const DestinationsSection = () => {
 
         <div className="destinations-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
           {destinations.map((dest, idx) => (
-            <div key={idx} className="destination-card" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '16px', overflow: 'hidden', background: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ height: '200px', width: '100%' }}>
-                <img src={dest.image} alt={dest.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div key={idx} className="destination-card grand-card" style={{ transitionDelay: `${idx * 50}ms`, borderRadius: '20px', overflow: 'hidden', background: '#fff', boxShadow: '0 15px 40px rgba(0,0,0,0.15)', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+              <div style={{ height: '220px', width: '100%', overflow: 'hidden' }}>
+                <img src={dest.image} alt={dest.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="grand-img" />
               </div>
               <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <h3 style={{ fontSize: '1.3rem', color: 'var(--dark-blue)', margin: '0 0 0.5rem 0' }}>{dest.name}</h3>

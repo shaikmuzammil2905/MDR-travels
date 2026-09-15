@@ -1768,3 +1768,10 @@ ul {
     transform: translateY(-4px); /* subtle lift on mobile */
   }
 }
+
+/* Fix for services section visibility on mobile */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
