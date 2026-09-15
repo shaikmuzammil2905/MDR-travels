@@ -6,7 +6,7 @@ import suvImg from '../assets/img15.png';
 import tempoImg from '../assets/img16.png';
 import vizagImg from '../assets/vizag-tour.jpg';
 
-const AboutSection = ({ isHomePage }) => {
+const AboutSection = ({ isHomePage, children }) => {
   const values = [
     {
       icon: <ShieldCheck size={32} className="text-primary-blue" />,
@@ -99,6 +99,9 @@ const AboutSection = ({ isHomePage }) => {
           </div>
         </div>
       </section>
+
+      {/* Insert children here, e.g. VehicleCategories and TourPackages */}
+      {children}
 
       {/* Core Values Section */}
       <section className="section" style={{ background: 'var(--light-bg)', paddingBottom: isHomePage ? '1rem' : '3.5rem' }}>

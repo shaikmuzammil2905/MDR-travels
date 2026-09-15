@@ -78,9 +78,10 @@ const Home = () => (
     <div className="container booking-container">
       <BookingForm />
     </div>
-    <AboutSection isHomePage={true} />
-    <VehicleCategories isHomePage={true} />
-    <TourPackages isHomePage={true} />
+    <AboutSection isHomePage={true}>
+      <VehicleCategories isHomePage={true} />
+      <TourPackages isHomePage={true} />
+    </AboutSection>
     <TrustPage isHomePage={true} />
     <DestinationsSection />
     <TravelProcessSection />
