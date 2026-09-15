@@ -38,15 +38,15 @@ const serviceData = {
   },
   'pilgrimage-travel': {
     title: 'Pilgrimage Travel',
-    intro: 'Dedicated travel packages for devotees visiting Tirupati, Srisailam, Annavaram, and other holy sites.',
+    intro: 'Dedicated travel packages for devotees visiting prominent temples across Andhra Pradesh.',
     features: ['Drivers experienced with temple routes', 'Assistance with local coordination', 'Comfortable travel for elderly passengers', 'Customizable itineraries'],
-    related: [{ title: 'Tirupati Temple Tour', path: '/packages/tirupati-temple-tour' }, { title: 'Srisailam Tour', path: '/packages/srisailam-tour' }]
+    related: [{ title: 'Vizag Local Temple Tour', path: '/packages/vizag-local-temples' }, { title: 'Pancharama Temples', path: '/packages/pancharama-temples' }]
   },
   'group-tours': {
     title: 'Group Tours',
     intro: 'Transport solutions for large families, corporate outings, and educational trips.',
     features: ['12 to 17 seater Tempo Travellers', 'Experienced group coordinators', 'Adequate luggage space', 'A/C comfort for all passengers'],
-    related: [{ title: 'Tempo Travellers', path: '/vehicles/tempo-travellers' }, { title: 'Multi-Destination Tour', path: '/packages/andhra-pradesh-multi-destination-tour' }]
+    related: [{ title: 'Tempo Travellers', path: '/vehicles/tempo-travellers' }, { title: 'Araku & Lambasingi', path: '/packages/araku-lambasingi' }]
   }
 };
 

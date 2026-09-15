@@ -6,14 +6,11 @@ import RelatedContent from '../components/RelatedContent';
 import FAQSection from '../components/FAQSection';
 
 const destinationData = {
-  'visakhapatnam': { title: 'Visakhapatnam', intro: 'The City of Destiny, offering beautiful beaches, scenic hills, and deep cultural heritage.', related: [{ title: 'Visakhapatnam City Tour', path: '/packages/visakhapatnam-city-tour' }] },
-  'araku-valley': { title: 'Araku Valley', intro: 'A picturesque hill station in the Eastern Ghats known for its coffee plantations, waterfalls, and tribal culture.', related: [{ title: 'Araku Valley Tour', path: '/packages/araku-valley-tour' }] },
-  'lambasingi': { title: 'Lambasingi', intro: 'Often referred to as the Kashmir of Andhra Pradesh, famous for its misty mornings and cool climate.', related: [{ title: 'Araku Valley Tour', path: '/packages/araku-valley-tour' }] },
-  'tirupati': { title: 'Tirupati', intro: 'The spiritual capital of Andhra Pradesh, home to the revered Sri Venkateswara Swamy Temple.', related: [{ title: 'Tirupati Temple Tour', path: '/packages/tirupati-temple-tour' }] },
-  'vijayawada': { title: 'Vijayawada', intro: 'A bustling city on the banks of the Krishna River, known for the Kanaka Durga Temple and rich history.', related: [{ title: 'Vijayawada & Amaravati Tour', path: '/packages/vijayawada-amaravati-tour' }] },
-  'amaravati': { title: 'Amaravati', intro: 'The ancient capital filled with Buddhist heritage and the famous Amaravati Stupa.', related: [{ title: 'Vijayawada & Amaravati Tour', path: '/packages/vijayawada-amaravati-tour' }] },
-  'srisailam': { title: 'Srisailam', intro: 'A holy town nestled in the Nallamala hills, featuring one of the 12 Jyotirlingas.', related: [{ title: 'Srisailam Tour', path: '/packages/srisailam-tour' }] },
-  'rajahmundry': { title: 'Rajahmundry', intro: 'The cultural capital of Andhra Pradesh, located on the scenic banks of the Godavari River.', related: [{ title: 'Multi-Destination Tour', path: '/packages/andhra-pradesh-multi-destination-tour' }] }
+  'visakhapatnam': { title: 'Visakhapatnam', intro: 'The City of Destiny, offering beautiful beaches, scenic hills, and deep cultural heritage.', related: [{ title: 'Vizag One Day Tour', path: '/packages/vizag-one-day' }] },
+  'araku-valley': { title: 'Araku Valley', intro: 'A picturesque hill station in the Eastern Ghats known for its coffee plantations, waterfalls, and tribal culture.', related: [{ title: 'Araku Valley 2 Days Tour', path: '/packages/araku-two-days' }] },
+  'lambasingi': { title: 'Lambasingi', intro: 'Often referred to as the Kashmir of Andhra Pradesh, famous for its misty mornings and cool climate.', related: [{ title: 'Araku & Lambasingi', path: '/packages/araku-lambasingi' }] },
+  'srikakulam': { title: 'Srikakulam', intro: 'A spiritual destination featuring the historic Arasavilli Sun God Temple.', related: [{ title: 'Arasavilli – Sri Kurmam', path: '/packages/arasavilli-sri-kurmam-srimukhalingam' }] },
+  'rajahmundry': { title: 'Rajahmundry', intro: 'The cultural capital of Andhra Pradesh, located on the scenic banks of the Godavari River.', related: [{ title: 'Pancharama Temples', path: '/packages/pancharama-temples' }] }
 };
 
 const DestinationDetailPage = () => {

@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle } from 'lucide-react';
-import heroBgDesktop from '../assets/hero-bright.png';
-import heroBgMobile from '../assets/hero-mobile.png';
+import heroBgDesktop from '../assets/hero-official.png';
+import heroBgMobile from '../assets/hero-official.png';
 
 const Hero = () => {
   return (
     <section className="hero">
       {/* Desktop Background */}
       <div className="hero-bg desktop-bg">
-        <img src={heroBgDesktop} alt="MDR Travels Luxury Bus" />
+        <img src={heroBgDesktop} alt="MDR Travels Coastal Journey" style={{ objectFit: 'cover', objectPosition: 'center' }} />
       </div>
 
-      {/* Mobile Background - image copy 23 */}
       <div className="hero-bg mobile-bg">
-        <img src={heroBgMobile} alt="MDR Travels Luxury Bus" />
+        <img src={heroBgMobile} alt="MDR Travels Coastal Journey" style={{ objectFit: 'cover', objectPosition: '70% center' }} />
       </div>
 
       <div className="hero-overlay"></div>

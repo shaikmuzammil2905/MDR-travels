@@ -22,24 +22,9 @@ const DestinationsSection = () => {
       image: "/images/araku-valley.jpg"
     },
     {
-      name: "Tirupati",
-      desc: "A major pilgrimage center surrounded by the scenic Seshachalam Hills.",
-      image: "/images/tour_tirupati_temple.jpg"
-    },
-    {
-      name: "Vijayawada",
-      desc: "A vibrant city on the banks of the Krishna River, rich in culture and heritage.",
-      image: "/images/vizag-tour.jpg"
-    },
-    {
-      name: "Amaravati",
-      desc: "The ancient capital known for the majestic Amaravati Stupa and Buddhist heritage.",
-      image: "/images/image67.png"
-    },
-    {
-      name: "Srisailam",
-      desc: "A revered pilgrimage town located in the heart of the Nallamala forest.",
-      image: "/images/pkg_srisailam.png"
+      name: "Srikakulam",
+      desc: "A spiritual destination featuring the historic Arasavilli Sun God Temple.",
+      image: "/images/pkg_multi.png"
     },
     {
       name: "Rajahmundry",

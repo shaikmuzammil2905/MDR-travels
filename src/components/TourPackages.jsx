@@ -9,64 +9,104 @@ const TourPackages = ({ isHomePage }) => {
 
   const packages = [
     {
-      id: "visakhapatnam-city-tour",
-      title: "Visakhapatnam City Tour",
+      id: "vizag-one-day",
+      title: "Vizag One Day Tour Package",
       image: "/images/pkg_vizag.png",
-      desc: "Explore Visakhapatnam's popular attractions and scenic locations in a comfortable private vehicle.",
-      duration: "Custom duration available",
+      desc: "Explore Visakhapatnam's popular attractions in a comfortable single day tour.",
+      duration: "1 Day",
       bestFor: "Families, Couples, and First-time Visitors",
-      highlights: ["RK Beach", "Kailasagiri", "Rushikonda Beach", "Submarine Museum", "Simhachalam Temple"],
+      highlights: ["Simhachalam Temple", "Kailasagiri", "Rushikonda Beach", "Submarine Museum", "Rama Krishna Beach"],
       vehicle: "Sedan / SUV / Tempo Traveller"
     },
     {
-      id: "araku-valley-tour",
-      title: "Araku Valley Tour",
+      id: "vizag-two-days",
+      title: "Vizag 2 Days Tour Package",
+      image: "/images/pkg_vizag.png",
+      desc: "A comprehensive two-day exploration of Visakhapatnam's beaches, museums, and temples.",
+      duration: "2 Days",
+      bestFor: "Leisure Travelers and Families",
+      highlights: ["Bheemili Beach", "Thotlakonda", "Kailasagiri", "Yarada Beach", "Simhachalam Temple"],
+      vehicle: "Sedan / SUV / Tempo Traveller"
+    },
+    {
+      id: "araku-one-day",
+      title: "Araku Valley One Day Tour Package",
       image: "/images/pkg_araku.png",
-      desc: "A scenic journey through the Eastern Ghats featuring mountain landscapes, valleys, viewpoints and local attractions.",
-      duration: "1 - 2 Days (Customizable)",
-      bestFor: "Nature Lovers and Weekend Getaways",
-      highlights: ["Borra Caves", "Coffee Plantations", "Tribal Museum", "Galikonda Viewpoint", "Padmapuram Gardens"],
+      desc: "A scenic journey through the Eastern Ghats featuring mountain landscapes and viewpoints in a single day.",
+      duration: "1 Day",
+      bestFor: "Nature Lovers",
+      highlights: ["Borra Caves", "Coffee Plantations", "Tribal Museum", "Katiki Waterfalls", "Damuku View Point"],
       vehicle: "SUV / Sedan recommended"
     },
     {
-      id: "tirupati-temple-tour",
-      title: "Tirupati Temple Tour",
-      image: "/images/pkg_tirupati.png",
-      desc: "A pilgrimage-focused travel option for families and devotees travelling to Tirupati and surrounding temple destinations.",
-      duration: "Custom duration available",
-      bestFor: "Devotees and Family Pilgrimages",
-      highlights: ["Sri Venkateswara Temple", "Padmavathi Temple", "Kapila Theertham", "Srikalahasti", "Safe outstation travel"],
-      vehicle: "Innova Crysta / Tempo Traveller"
+      id: "araku-two-days",
+      title: "Araku Valley 2 Days Tour Package",
+      image: "/images/pkg_araku.png",
+      desc: "An extended stay in Araku Valley to fully experience its natural beauty, waterfalls, and culture.",
+      duration: "2 Days",
+      bestFor: "Weekend Getaways",
+      highlights: ["Borra Caves", "Chaparai Waterfalls", "Araku Pinary", "Madagada View Point", "Coffee Museum"],
+      vehicle: "SUV / Sedan recommended"
     },
     {
-      id: "srisailam-tour",
-      title: "Srisailam Spiritual Journey",
-      image: "/images/pkg_srisailam.png",
-      desc: "A spiritual and scenic journey combining temple travel with beautiful landscapes and comfortable road travel.",
-      duration: "Custom duration available",
-      bestFor: "Pilgrimage and Nature trips",
-      highlights: ["Mallikarjuna Swamy Temple", "Pathala Ganga", "Srisailam Dam", "Sikharam", "Forest scenic routes"],
-      vehicle: "Premium SUV / Sedan"
+      id: "araku-lambasingi",
+      title: "Araku & Lambasingi Tour Package",
+      image: "/images/pkg_araku.png",
+      desc: "Experience the cool mist of Lambasingi combined with the lush beauty of Araku Valley.",
+      duration: "Custom duration",
+      bestFor: "Nature Enthusiasts and Couples",
+      highlights: ["Lambasingi View Point", "Tajangi Reservoir", "Kothapalli Waterfalls", "Borra Caves", "Vanajangi View Point"],
+      vehicle: "SUV recommended"
     },
     {
-      id: "vijayawada-amaravati-tour",
-      title: "Vijayawada & Amaravati Tour",
-      image: "/images/pkg_vijayawada.png",
-      desc: "Explore important cultural, spiritual and heritage destinations around Vijayawada and Amaravati.",
-      duration: "Custom duration available",
-      bestFor: "Heritage and Cultural Exploration",
-      highlights: ["Kanakadurga Temple", "Bhavani Island", "Undavalli Caves", "Amaravati Stupa", "Prakasam Barrage"],
+      id: "vizag-local-temples",
+      title: "Vizag Local Temple Tour",
+      image: "/images/pkg_multi.png",
+      desc: "A spiritual tour covering the most prominent temples in Visakhapatnam.",
+      duration: "1 Day",
+      bestFor: "Devotees and Pilgrims",
+      highlights: ["Simhachalam Temple", "Kanaka Maha Lakshmi Temple", "TTD Venkateswara Swamy Temple", "Sampath Vinayaka Temple"],
       vehicle: "Sedan / SUV"
     },
     {
-      id: "andhra-pradesh-multi-destination-tour",
-      title: "Andhra Pradesh Multi-Destination",
+      id: "arasavilli-sri-kurmam-srimukhalingam",
+      title: "Arasavilli – Sri Kurmam – Srimukhalingam Temple Tour",
       image: "/images/pkg_multi.png",
-      desc: "A flexible multi-day journey connecting important cities, temples and tourist destinations across Andhra Pradesh.",
-      duration: "Custom multi-day itinerary",
-      bestFor: "Extended Holidays and Complete Explorations",
-      highlights: ["Customizable route", "Flexible schedule", "Multiple cities", "Dedicated driver", "Comfortable long-distance vehicle"],
-      vehicle: "Premium SUV / Tempo Traveller"
+      desc: "Visit the historic Sun God temple and other ancient temples in the Srikakulam region.",
+      duration: "Custom duration",
+      bestFor: "Heritage and Spiritual Travelers",
+      highlights: ["Arasavilli Temple", "Sri Kurmam Temple", "Srimukhalingam Temple", "Ramanarayanam"],
+      vehicle: "Sedan / SUV"
+    },
+    {
+      id: "anakapalli-annavaram-pitapuram-samarlakota",
+      title: "Anakapalli – Annavaram – Pitapuram – Samarlakota Temple Tour",
+      image: "/images/pkg_multi.png",
+      desc: "A comprehensive pilgrimage covering key temples across the coastal region.",
+      duration: "Custom duration",
+      bestFor: "Pilgrimage",
+      highlights: ["Anakapalli Temple", "Annavaram Temple", "Kukkuteswara Swamy Temple", "Bhimeswara Swamy Temple"],
+      vehicle: "Sedan / SUV / Tempo Traveller"
+    },
+    {
+      id: "vadapalli-temple",
+      title: "Vadapalli Venkateswara Swamy Temple Tour",
+      image: "/images/pkg_multi.png",
+      desc: "Dedicated spiritual visit to the renowned Vadapalli Venkateswara Swamy Temple.",
+      duration: "1 Day",
+      bestFor: "Devotees",
+      highlights: ["Vadapalli Venkateswara Swamy Temple"],
+      vehicle: "Sedan / SUV"
+    },
+    {
+      id: "pancharama-temples",
+      title: "Pancharama Temples Tour Package",
+      image: "/images/pkg_multi.png",
+      desc: "A sacred journey visiting the five ancient Hindu temples dedicated to Lord Shiva in Andhra Pradesh.",
+      duration: "Custom duration",
+      bestFor: "Spiritual Travelers",
+      highlights: ["Amareswara Swamy", "Someswara Swamy", "Ksheera Rama Lingeswara Swamy", "Bhimeswara Swamy", "Kumara Rama Bhimeswara Swamy"],
+      vehicle: "Sedan / SUV / Tempo Traveller"
     }
   ];
 

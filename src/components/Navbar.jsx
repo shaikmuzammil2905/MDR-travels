@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle, ChevronDown } from 'lucide-react';
-import logo from '../assets/image.png';
+import logo from '../assets/logo-official.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,11 +66,16 @@ const Navbar = () => {
   ];
 
   const packagesList = [
-    { title: "Visakhapatnam City Tour", path: "/packages/visakhapatnam-city-tour" },
-    { title: "Araku Valley Tour", path: "/packages/araku-valley-tour" },
-    { title: "Tirupati Temple Tour", path: "/packages/tirupati-temple-tour" },
-    { title: "Srisailam Tour", path: "/packages/srisailam-tour" },
-    { title: "Vijayawada & Amaravati", path: "/packages/vijayawada-amaravati-tour" }
+    { title: "Vizag One Day Tour", path: "/packages/vizag-one-day" },
+    { title: "Vizag 2 Days Tour", path: "/packages/vizag-two-days" },
+    { title: "Araku One Day Tour", path: "/packages/araku-one-day" },
+    { title: "Araku 2 Days Tour", path: "/packages/araku-two-days" },
+    { title: "Araku & Lambasingi Tour", path: "/packages/araku-lambasingi" },
+    { title: "Vizag Local Temple Tour", path: "/packages/vizag-local-temples" },
+    { title: "Arasavilli – Sri Kurmam – Srimukhalingam", path: "/packages/arasavilli-sri-kurmam-srimukhalingam" },
+    { title: "Anakapalli – Annavaram – Pitapuram – Samarlakota", path: "/packages/anakapalli-annavaram-pitapuram-samarlakota" },
+    { title: "Vadapalli Venkateswara Swamy Tour", path: "/packages/vadapalli-temple" },
+    { title: "Pancharama Temples Tour", path: "/packages/pancharama-temples" }
   ];
 
   const isServicesActive = location.pathname === '/services';
