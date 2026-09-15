@@ -709,9 +709,27 @@ ul {
     height: 100%;
     z-index: -2;
     background-color: #25a8f6 !important;
+  }
+  .mobile-bg-sky, .mobile-bg-cars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-bg-sky {
+    background-size: cover !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 75%);
+    mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 75%);
+    z-index: 1;
+  }
+  .mobile-bg-cars {
     background-size: contain !important;
     background-position: bottom center !important;
     background-repeat: no-repeat !important;
+    z-index: 2;
   }
   .hero {
     min-height: clamp(370px, 105vw, 420px) !important;
