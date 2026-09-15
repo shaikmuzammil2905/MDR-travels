@@ -146,7 +146,7 @@ const AboutSection = ({ isHomePage }) => {
         <>
           <section className="section">
             <div className="container">
-              <div className="reveal" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+              <div data-aos="fade-up" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
                 <h2 className="section-title">Our Service Philosophy</h2>
                 <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '2.5rem' }}>
                   We believe that comfortable travel shouldn't be complicated. By focusing on passenger comfort, driver experience, and diverse vehicle choices, we aim to be your first call for all travel needs.

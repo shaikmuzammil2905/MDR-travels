@@ -104,7 +104,7 @@ const TrustPage = ({ isHomePage }) => {
               </div>
             </div>
             
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div data-aos="fade-up" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
                 <img src="/images/trust_suv.png" alt="Comfortable SUV Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>

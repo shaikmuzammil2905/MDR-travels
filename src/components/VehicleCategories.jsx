@@ -48,7 +48,7 @@ const VehicleCategories = ({ isHomePage }) => {
       <section className="section">
         <div className="container">
           {isHomePage && (
-            <div className="reveal" style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
+            <div data-aos="fade-up" style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
               <h2 className="section-title">Our Vehicle Categories</h2>
               <p style={{ color: '#64748b', fontSize: '1.05rem' }}>Select a category to explore our available vehicles.</p>
             </div>

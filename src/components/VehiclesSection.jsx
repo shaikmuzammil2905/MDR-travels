@@ -153,7 +153,7 @@ const VehiclesSection = ({ isHomePage }) => {
       {/* 4-Seater Cars */}
       <section className="section">
         <div className="container">
-          <div className="reveal" style={{ marginBottom: '2.5rem' }}>
+          <div data-aos="fade-up" style={{ marginBottom: '2.5rem' }}>
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>4-Seater Cars</h2>
             <p style={{ color: '#64748b', fontSize: '1.05rem' }}>Popular vehicle options for quick commutes, couples, and small families.</p>
           </div>
@@ -166,7 +166,7 @@ const VehiclesSection = ({ isHomePage }) => {
       {/* SUVs */}
       <section className="section" style={{ background: 'var(--light-bg)' }}>
         <div className="container">
-          <div className="reveal" style={{ marginBottom: '2.5rem' }}>
+          <div data-aos="fade-up" style={{ marginBottom: '2.5rem' }}>
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>SUV / 6–7 Seater Vehicles</h2>
             <p style={{ color: '#64748b', fontSize: '1.05rem' }}>Spacious and comfortable options subject to availability. Perfect for long-distance trips.</p>
           </div>
@@ -179,7 +179,7 @@ const VehiclesSection = ({ isHomePage }) => {
       {/* Tempo Travellers */}
       <section className="section">
         <div className="container">
-          <div className="reveal" style={{ marginBottom: '2.5rem' }}>
+          <div data-aos="fade-up" style={{ marginBottom: '2.5rem' }}>
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>Tempo Travellers for Group Travel</h2>
             <p style={{ color: '#64748b', fontSize: '1.05rem' }}>Premium group travellers available on request for large families and corporate outings.</p>
           </div>
