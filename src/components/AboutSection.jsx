@@ -4,7 +4,7 @@ import busImg from '../assets/hero-bright.png';
 import sedanImg from '../assets/img14.png';
 import suvImg from '../assets/img15.png';
 import tempoImg from '../assets/img16.png';
-import vizagImg from '../assets/image-116.png';
+import vizagImg from '../assets/vizag-tour.jpg';
 
 const AboutSection = ({ isHomePage, children }) => {
   const values = [
