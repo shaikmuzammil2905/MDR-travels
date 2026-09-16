@@ -61,7 +61,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "vizag-local-temples",
       title: "Vizag Local Temple Tour",
-      image: "/images/temple_vizag.png",
+      image: "/images/image-117.png",
       desc: "A spiritual tour covering the most prominent temples in Visakhapatnam.",
       duration: "1 Day",
       bestFor: "Devotees and Pilgrims",
@@ -71,7 +71,7 @@ const TourPackages = ({ isHomePage }) => {
     {
       id: "arasavilli-sri-kurmam-srimukhalingam",
       title: "Arasavilli – Sri Kurmam – Srimukhalingam Temple Tour",
-      image: "/images/temple_arasavilli.png",
+      image: "/images/image-118.png",
       desc: "Visit the historic Sun God temple and other ancient temples in the Srikakulam region.",
       duration: "Custom duration",
       bestFor: "Heritage and Spiritual Travelers",

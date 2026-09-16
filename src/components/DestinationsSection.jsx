@@ -28,7 +28,7 @@ const DestinationsSection = () => {
     {
       name: "Rajahmundry",
       desc: "The cultural capital of Andhra Pradesh, famous for its Godavari river views.",
-      image: "/images/img_113.png"
+      image: "/images/image-119.png"
     }
   ];
 
