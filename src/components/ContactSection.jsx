@@ -42,7 +42,7 @@ const ContactSection = () => {
               <Mail size={22} className="about-info-icon" />
               <div>
                 <strong>Official Email</strong>
-                <p><a href="mailto:mdrtravels26@gmail.com">mdrtravels26@gmail.com</a></p>
+                <p><a href="mailto:Mdrtravels2026@gmail.com">Mdrtravels2026@gmail.com</a></p>
               </div>
             </div>
           </div>
