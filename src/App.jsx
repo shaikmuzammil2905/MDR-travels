@@ -26,6 +26,16 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Update canonical tag dynamically
+    let canonicalLink = document.querySelector("link[rel='canonical']");
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    const cleanPath = pathname === '/' ? '' : pathname;
+    canonicalLink.setAttribute('href', `https://www.mdrtravels.in${cleanPath}`);
   }, [pathname]);
   return null;
 };
